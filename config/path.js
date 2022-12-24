@@ -16,8 +16,10 @@ module.exports = {
     },
 
     scss: {
-        src: pathSrc + '/styles/*.{scss,sass}',
-        watch: pathSrc + '/pug/**/*.{scss,sass}',
+        src: pathSrc + '/styles/bundle.{scss,sass}',
+        watch: [pathSrc + '/pug/**/*.{scss,sass}',
+            '!' + pathSrc + '/styles/bundle.{scss,sass}',
+            pathSrc + '/styles/*.{scss,sass}'],
         dest: pathDest + '/css'
     },
     css: {

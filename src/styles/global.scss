@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: $widthContainer;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
