@@ -1,0 +1,21 @@
+.hide-list {
+  max-width: $widthContainer;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 4px #000;
+  height: auto;
+  visibility: hidden;
+  transition: 0.5s all;
+  opacity: 0;
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.hide-list.activeHideMenu {
+  visibility: visible;
+  transition: 0.5s all;
+  opacity: 100%;
+}
