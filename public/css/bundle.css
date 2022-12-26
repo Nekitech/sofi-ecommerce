@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 .header__topLine {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,6 +308,79 @@ a {
   width: auto;
 }
 
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #9f2925;
+  width: 100vw;
+  height: 60px;
+}
+
+.header__menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header__menu__link {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.header__menu__link:hover:after {
+  -webkit-transform: rotate(180deg) translateY(5px);
+  -ms-transform: rotate(180deg) translateY(5px);
+  transform: rotate(180deg) translateY(5px);
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  bottom: 8px;
+  background: url("../img/arrowHideListsGold.svg") no-repeat;
+}
+
+.header__menu__link:hover {
+  color: #BB9D60;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.header__menu__link:after {
+  content: "";
+  background: url("../img/arrowHideLists.svg") no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -20px;
+  width: 12px;
+  height: 8px;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
 @supports (-webkit-appearance:none) {
   .header__userBlock__authLink:nth-child(1):before {
     background: url("../img/profileIcon.svg") no-repeat;
@@ -310,5 +388,13 @@ a {
 
   .header__userBlock__cartText:before {
     background: url("../img/cartIcon.svg") no-repeat;
+  }
+
+  .header__menu__link:hover:after {
+    background: url("../img/arrowHideListsGold.svg") no-repeat;
+  }
+
+  .header__menu__link:after {
+    background: url("../img/arrowHideLists.svg") no-repeat;
   }
 }
