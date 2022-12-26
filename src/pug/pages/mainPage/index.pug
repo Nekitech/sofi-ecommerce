@@ -1,4 +1,19 @@
 extends ../../layout/layout
 block page
     include ../../chunk/header/header
-    include ../../components/previewSlider/PreviewSlider
+    main.main
+        include ../../components/previewSlider/PreviewSlider
+        .container
+            .main__blocks
+                a.main__blocks__item
+                    img.main__blocks__item__img(src='img/blockImg1.webp')
+                    p.main__blocks__item__text
+                        | Новогодние ткани
+                a.main__blocks__item
+                    img.main__blocks__item__img(src='img/blockImg2.webp')
+                    p.main__blocks__item__text
+                        | Все ткани
+                a.main__blocks__item
+                    img.main__blocks__item__img(src='img/blockImg3.webp')
+                    p.main__blocks__item__text
+                        | Новогодние ткани

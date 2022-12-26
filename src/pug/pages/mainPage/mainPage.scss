@@ -1,4 +1,27 @@
 @import "../../components/previewSlider/PreviewSlider";
 
 
+.main {
 
+  &__blocks {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0 30px;
+    margin: 30px 0 40px 0;
+  }
+  &__blocks__item {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+
+  }
+  &__blocks__item__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__blocks__item__text {
+    text-align: center;
+    padding: 10px 5px 11px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
