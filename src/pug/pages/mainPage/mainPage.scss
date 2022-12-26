@@ -1,20 +1,4 @@
-//vars
-
-$colorSilderBuller: #9f2925;
+@import "../../components/previewSlider/PreviewSlider";
 
 
-//slider
-.slider {
 
-  margin-top: 300px;
-
-
-}
-
-.slider-guide {
-
-
-}
-.glide__bullet.slider-glide__bullet.glide__bullet--active {
-      background-color: $colorSilderBuller;
-}

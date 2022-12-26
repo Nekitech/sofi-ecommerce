@@ -1,0 +1,63 @@
+//vars
+
+$colorSilderBuller: #9f2925;
+
+$colorTitle: #9f2925;
+
+.slider {
+
+  margin-top: 30px;
+
+  &__title {
+    display: block;
+    color: $colorTitle;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+
+}
+
+.slider-guide {
+
+
+}
+
+.glide__bullet.slider-glide__bullet.glide__bullet--active {
+  background-color: $colorSilderBuller;
+}
+
+.glide__arrow__img.slider-glide__arrow__img {
+  width: 10px;
+  height: 6px;
+}
+
+.glide__arrow.slider-guide__arrow {
+  background-color: #9f2925;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.glide__arrow--left.slider-guide__arrow-left img {
+  transform: rotate(90deg);
+
+}
+
+.glide__arrow--right.slider-guide__arrow-right img {
+  transform: rotate(-90deg);
+}
+.glide__arrow--left.slider-guide__arrow-left {
+  left: -20px;
+}
+.glide__arrow--right.slider-guide__arrow-right {
+  right: -20px;
+}
