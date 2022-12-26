@@ -14,6 +14,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
   font-family: Roboto, sans-serif;
 }
 
@@ -413,11 +414,63 @@ li {
 }
 
 .slider {
-  margin-top: 300px;
+  margin-top: 30px;
+}
+
+.slider__title {
+  display: block;
+  color: #9f2925;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .glide__bullet.slider-glide__bullet.glide__bullet--active {
   background-color: #9f2925;
+}
+
+.glide__arrow__img.slider-glide__arrow__img {
+  width: 10px;
+  height: 6px;
+}
+
+.glide__arrow.slider-guide__arrow {
+  background-color: #9f2925;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glide__arrow--left.slider-guide__arrow-left img {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.glide__arrow--right.slider-guide__arrow-right img {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.glide__arrow--left.slider-guide__arrow-left {
+  left: -20px;
+}
+
+.glide__arrow--right.slider-guide__arrow-right {
+  right: -20px;
 }
 
 .glide {
