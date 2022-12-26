@@ -24,4 +24,21 @@ header.header
                     a(href='+7 (999) 999-09-43').header__topLine__numberLink
                         | +7 (999) 999-09-43
             .header__main
+                .header__logo.logo
+                    a(href='#').logo__link
+                        img.logo__img(src='img/logo_header-mobile-goriz.svg')
+                .header__search
+                    form.header__searchForm
+                        input.header__searchForm__input(type='text' placeholder='Поиск по каталогу')
+                        button.header__searchForm__button
+                            img.header__searchForm__buttonIcon(src='img/searchIcon.webp')
+                .header__userBlock
+                    .header__userBlock__auth
+                        a.header__userBlock__authLink(href='#') Войти на сайт
+                        a.header__userBlock__authLink(href='#') Регистрация
+                    .header__userBlock__cart
+                        a.header__userBlock__cartLink(href='#')
+                            span.header__userBlock__cartText Моя корзина
+                                span.header__userBlock__cartPrice 0 руб.
+                            span.header__userBlock__positions 0 позиций
             .header__menu
