@@ -1,0 +1,20 @@
+.counter {
+  display: none;
+  margin: 22px 0 25px 0;
+
+  &__btn {
+    width: 42px;
+    height: 42px;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    color: #a0a0a0;
+    border: none;
+  }
+
+  &__input {
+    outline: none;
+    border: 1px solid #f0f0f0;
+    text-align: right;
+    padding: 0 15px;
+  }
+}

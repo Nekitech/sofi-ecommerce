@@ -1,0 +1,148 @@
+@import '../../components/counterCard/CounterCard.scss';
+
+
+
+.card {
+  width: 224px;
+  height: 320px;
+  box-shadow: 0 0 4px #000;
+  background-color: #fff;
+  padding: 10px;
+
+  &__blockImg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__switchesImgs {
+      display: grid;
+      grid-template-areas: "img1 imgMain"
+                           "img2 imgMain"
+                           "img3 imgMain";
+      gap: 20px 20px;
+
+      &__img {
+        width: 63px;
+        height: 63px;
+        object-fit: cover;
+        grid-area: imgs;
+        display: none;
+      }
+
+      &__img:nth-child(1) {
+        grid-area: img1;
+      }
+
+      &__img:nth-child(2) {
+        grid-area: img2;
+      }
+
+      &__img:nth-child(3) {
+        grid-area: img3;
+      }
+
+      &__mainImg {
+        grid-area: imgMain;
+        object-fit: cover;
+        width: 180px;
+        height: 240px;
+        background: url("../img/card1MainImg.webp") no-repeat;
+      }
+
+      &__img:hover {
+        cursor: pointer;
+        padding: 5px;
+        border: 2px solid #9f2925;
+        transform: scale(1.18);
+      }
+
+      &__img:nth-child(1):hover ~ &__mainImg {
+        background: url("../img/card1MainImg.webp") no-repeat;
+      }
+
+      &__img:nth-child(2):hover ~ &__mainImg {
+        background: url("../img/card1Img2.webp") no-repeat;
+
+      }
+
+      &__img:nth-child(3):hover ~ &__mainImg {
+        background: url("../img/card1Img3.webp") no-repeat;
+      }
+    }
+
+
+  }
+
+  &__blockInfo {
+    &___title {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    &__price {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 0 20px;
+
+      &__new {
+        color: #9f2925;
+      }
+
+      &__prev {
+        text-decoration: line-through;
+        color: #6d6d6d;
+      }
+    }
+
+    &__table {
+      display: none;
+
+      &__row {
+        border: 1px solid #f0f0f0;
+
+        &__cell {
+
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #000;
+          padding: 6px 10px;
+          border-left:  1px solid #f0f0f0;
+        }
+      }
+    }
+  }
+
+}
+
+.card:hover .card__blockImg__switchesImgs img {
+  display: block;
+}
+
+.card:hover {
+  position: relative;
+  width: 300px;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 35px;
+}
+
+.card:hover .card__blockInfo__table {
+  display: table;
+  border: 1px solid #f0f0f0;
+  border-collapse: collapse;
+}
+.card:hover .counter {
+  display: flex;
+}
+

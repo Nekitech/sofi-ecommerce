@@ -1,6 +1,7 @@
 import {hideMenuData} from "./dataMarket";
 import {hideMenuHandler} from "./hide_menu";
-
+import Glide from '@glidejs/glide'
+import Counter from "./counterCard";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -8,7 +9,7 @@ hideMenuHandler(hideMenu, hideMenuData);
 
 
 
-import Glide from '@glidejs/glide'
+
 new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
@@ -17,3 +18,8 @@ new Glide('.glide', {
 
 
 }).mount()
+
+const counters = document.querySelectorAll('.counter__input');
+counters.forEach(counter => {
+    new Counter(counter, counter.previousElementSibling, counter.nextElementSibling, 0, 1);
+})

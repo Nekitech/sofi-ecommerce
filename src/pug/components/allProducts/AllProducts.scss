@@ -1,0 +1,14 @@
+@import '../../mixins/cardProduct/CardProduct.scss';
+
+
+
+.allProducts {
+  width: 100%;
+  margin-bottom: 400px;
+
+  &__wrapper {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+  }
+}
