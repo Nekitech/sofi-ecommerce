@@ -2,7 +2,8 @@
 @import '../../components/allProducts/AllProducts';
 
 .main {
-
+  position: relative;
+  z-index: 1;
   &__blocks {
     display: flex;
     width: 100%;

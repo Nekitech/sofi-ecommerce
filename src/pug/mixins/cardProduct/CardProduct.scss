@@ -1,13 +1,11 @@
 @import '../../components/counterCard/CounterCard.scss';
 
 
-
 .card {
   width: 224px;
   height: 320px;
-  box-shadow: 0 0 4px #000;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 10px 0 0;
 
   &__blockImg {
     display: flex;
@@ -47,6 +45,22 @@
         width: 180px;
         height: 240px;
         background: url("../img/card1MainImg.webp") no-repeat;
+        position: relative;
+        z-index: 1;
+      }
+
+      &__mainImg:after {
+        content: 'Скидка 10%';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 116px;
+        height: 18px;
+        padding: 7px 0;
+        text-align: center;
+        background-color: #bb9d60;
+        color: #9f2925;
       }
 
       &__img:hover {
@@ -74,11 +88,11 @@
   }
 
   &__blockInfo {
-    &___title {
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.5;
+    &__title {
+      font-size: 12px;
+      padding-top: 7px;
+      line-height: 1.4;
+      word-break: break-word;
 
       color: #000;
       margin-bottom: 10px;
@@ -101,6 +115,8 @@
         text-decoration: line-through;
         color: #6d6d6d;
       }
+
+
     }
 
     &__table {
@@ -117,8 +133,40 @@
           line-height: 1.5;
           color: #000;
           padding: 6px 10px;
-          border-left:  1px solid #f0f0f0;
+          border-left: 1px solid #f0f0f0;
         }
+      }
+    }
+
+    &__btns {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 0 10px;
+
+      &__btn {
+        padding: 0 5px;
+        background-color: #9f2925;
+        border: none;
+        width: 197px;
+        height: 48px;
+        transition: 0.3s all;
+      }
+
+      &__btn:hover {
+        opacity: 50%;
+        transition: 0.3s all;
+      }
+
+      &__btn a {
+        font-weight: 700;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 0 5px;
+        color: #fff;
+
       }
     }
   }
@@ -130,11 +178,13 @@
 }
 
 .card:hover {
-  position: relative;
+  position: absolute;
   width: 300px;
   height: auto;
-  padding-top: 20px;
-  padding-right: 35px;
+  padding: 20px 35px 10px 10px;
+  z-index: 40;
+  background-color: #fff;
+  transform: translateX(-60px);
 }
 
 .card:hover .card__blockInfo__table {
@@ -142,7 +192,16 @@
   border: 1px solid #f0f0f0;
   border-collapse: collapse;
 }
+
 .card:hover .counter {
   display: flex;
 }
+
+.card:hover .card__blockInfo__btns {
+  display: flex;
+}
+
+
+
+
 

@@ -1,40 +1,76 @@
 section.allProducts
     .container
-        .allProducts__wrapper
-            include ../../mixins/cardProduct/CardProduct
-            +CardProduct({
-                img1: 'img/card1MainImg.webp',
-                img2: 'img/card1img2.webp',
-                img3: 'img/card1img3.webp',
-                mainImg: 'img/card1MainImg.webp',
-                title: 'Ткань "Весна"',
-                priceNew: '1000 руб.',
-                pricePrev: '2000 руб.'
-            })
-            +CardProduct({
-                img1: 'img/card1MainImg.webp',
-                img2: 'img/card1img2.webp',
-                img3: 'img/card1img3.webp',
-                mainImg: 'img/card1MainImg.webp',
-                title: 'Ткань "Весна"',
-                priceNew: '1000 руб.',
-                pricePrev: '2000 руб.'
-            })
-            +CardProduct({
-                img1: 'img/card1MainImg.webp',
-                img2: 'img/card1img2.webp',
-                img3: 'img/card1img3.webp',
-                mainImg: 'img/card1MainImg.webp',
-                title: 'Ткань "Весна"',
-                priceNew: '1000 руб.',
-                pricePrev: '2000 руб.'
-            })
-            +CardProduct({
-                img1: 'img/card1MainImg.webp',
-                img2: 'img/card1img2.webp',
-                img3: 'img/card1img3.webp',
-                mainImg: 'img/card1MainImg.webp',
-                title: 'Ткань "Весна"',
-                priceNew: '1000 руб.',
-                pricePrev: '2000 руб.'
-            })
+        h3.slider__title
+            | Все товары
+        include ../../mixins/cardProduct/CardProduct
+        .glide.allProducts__slider
+            .glide__track.allProducts__track(data-glide-el="track")
+                .glide__slides.allProducts__slides
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань "Весна"',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань "Весна"',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань "Весна"',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань "Весна"',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .glide__slide.allProducts__slider__slide
+                        +CardProduct({
+                            img1: 'img/card1MainImg.webp',
+                            img2: 'img/card1img2.webp',
+                            img3: 'img/card1img3.webp',
+                            mainImg: 'img/card1MainImg.webp',
+                            title: 'Ткань "Весна"',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+            .glide__arrows.allProducts__slider__arrows(data-glide-el="controls")
+                button.glide__arrow.allProducts__slider__arrow.glide__arrow--left.allProducts__slider__arrow-left(data-glide-dir='<')
+                    img.glide__arrow__img.allProducts__slider__arrow__img(src='img/arrowWhite.svg')
+                button.glide__arrow.allProducts__slider__arrow.glide__arrow--right.allProducts__slider__arrow-right(data-glide-dir='>')
+                    img.glide__arrow__img.allProducts__slider__arrow__img(src='img/arrowWhite.svg')
+
+
+
