@@ -1,11 +1,11 @@
-section.allProducts
+section.prodsDiscount
     .container
-        h3.titleSection.allProducts__title
-            | Все товары
+        h3.titleSection.prodsDiscount__title
+            | Товары со скидкой
         include ../../mixins/cardProduct/CardProduct
-        .glide.allProducts__slider
+        .glide.prodsDiscount__slider
             .glide__track.glide__track(data-glide-el="track")
-                .glide__slides
+                .glide__slides.glide__slides
                     .glide__slide.glide__slider__slide
                         +CardProduct({
                             img1: 'img/card1MainImg.webp',
@@ -71,6 +71,3 @@ section.allProducts
                     img.glide__arrow__img.glide__slider__arrow__img(src='img/arrowWhite.svg')
                 button.glide__arrow.glide__slider__arrow.glide__arrow--right.glide__slider__arrow-right(data-glide-dir='>')
                     img.glide__arrow__img.glide__slider__arrow__img(src='img/arrowWhite.svg')
-
-
-

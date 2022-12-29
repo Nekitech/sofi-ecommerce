@@ -1,0 +1,9 @@
+.prodsDiscount {
+  margin-top: -200px;
+  position: relative;
+  z-index: -1;
+
+  &__title {
+    width: 350px;
+  }
+}
