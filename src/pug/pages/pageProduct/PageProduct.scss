@@ -53,28 +53,34 @@
     &__smallImg:nth-child(1) {
       grid-area: img1;
       background: url("../img/card1MainImg.webp") no-repeat;
+      background-size: cover;
     }
 
     &__smallImg:nth-child(1):hover ~ &__mainImg {
       background: url("../img/card1MainImg.webp") no-repeat;
+      background-size: cover;
     }
 
     &__smallImg:nth-child(2) {
       grid-area: img2;
       background: url("../img/card1Img2.webp") no-repeat;
+      background-size: cover;
     }
 
     &__smallImg:nth-child(2):hover ~ &__mainImg {
       background: url("../img/card1Img2.webp") no-repeat;
+      background-size: cover;
     }
 
     &__smallImg:nth-child(3) {
       grid-area: img3;
       background: url("../img/card1Img3.webp") no-repeat;
+      background-size: cover;
     }
 
     &__smallImg:nth-child(3):hover ~ &__mainImg {
       background: url("../img/card1Img3.webp") no-repeat;
+      background-size: cover;
     }
 
   }
