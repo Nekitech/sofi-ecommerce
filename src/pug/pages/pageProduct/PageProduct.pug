@@ -1,0 +1,99 @@
+extends ../../layout/layout
+block page
+    include ../../chunk/header/header
+    main.productPage
+        section.breadcrumbs
+
+        section.productPage__product
+            .container
+                .productPage__wrapper
+                    .productPage__imgs
+                        img.productPage__imgs__smallImg(src='img/card1MainImg.webp')
+                        img.productPage__imgs__smallImg(src='img/card1img2.webp')
+                        img.productPage__imgs__smallImg(src='img/card1img3.webp')
+                        .productPage__imgs__mainImg
+
+                    .productPage__info
+                        h3.productPage__title
+                            | Саржа цв.Темный зелено-серый, ш.1.53м, хлопок-100%, 235гр/м.кв
+                        .productPage__discount
+                            | СКИДКА 10%
+                        .productPage__data
+                            table.productPage__table
+                                tr.productPage__table__row
+                                    td.productPage__table__cell
+                                        | Состав
+                                    td.productPage__table__cell
+                                        | Хлопок 100%
+                                tr.productPage__table__row
+                                    td.productPage__table__cell
+                                        | Ширина
+                                    td.productPage__table__cell
+                                        | 1.5м
+                                tr.productPage__table__row
+                                    td.productPage__table__cell
+                                        | Плотность
+                                    td.productPage__table__cell
+                                        | 165 гр/м2
+                                tr.productPage__table__row
+                                    td.productPage__table__cell
+                                        | Страна производитель
+                                    td.productPage__table__cell
+                                        | Россия
+                                tr.productPage__table__row
+                                    td.productPage__table__cell
+                                        | Артикул
+                                    td.productPage__table__cell
+                                        | 031851
+                            .productPage__choice
+                                .productPage__choice__wrapper
+                                    .productPage__choice__prices
+                                        .productPage__choice__prices__currPrice
+                                            | 261 руб/м
+                                        .productPage__choice__prices__prevPrice
+                                            | 290 руб.
+                                    p.productPage__choice__text
+                                        | Выберите длину
+                                    .productPage__choice__counter
+                                        include ../../components/counterCard/CounterCard
+                                    p.productPage__choice__price
+                                        | 44 руб.
+                                    .productPage__choice__btns
+                                        button.productPage__choice__btns__btn
+                                            a(href='#')
+                                                | В корзину
+                                        .productPage__choice__btns__fav
+                                            img.productPage__choice__btns__favImg(src='img/like-empty.svg')
+                        p.productPage__description
+                            | Внимание! На ткани могут встречаться утолщение нитей, непрокрасы в виде небольших пятнышек-точек, короткие единичные вплетения нитей другого цвета. Для данного вида ткани это браком и дефектом не считается. Не вырезаем.
+                            | Ткань рвут, чтобы избежать перекосов при дальнейшей обработке. Просим учитывать это при заказе.
+                            | Саржа - это плотный материал, который состоит на 100% из хлопка. Имеет диагональное переплетение нитей (вид переплетения, при котором на ткани четко прослеживаются характерные косые полоски, образующие рубчик.
+                            | Ткань прочная, износостойкая, обладает хорошей терморегуляцией, стойкая к намоканию, экологичная, на ощупь плотная; не просвечивает; усадка до 6%.
+                            | Саржа не вызывает аллергию, отлично пропускает воздух, хорошо впитывает пот, не мнется, длительное время сохраняет товарный вид, не выгорает на солнце, не линяет при стирке, не впитывает запахи, имеет ровный однотонный цвет, который долго сохраняет.
+                            | Применение ткани: саржа универсальный материал, который использую при шитье лёгкой верхней одежды (ветровки, плащи), прочной спецодежды (рабочие костюмы, комбинезоны), сумки и даже обувь, так же используют для обивки мебели.
+                            | Рекомендации по уходу: максимальная температура стирки 40С (При температуре воды свыше 60С ткань может потерять свой насыщенный и яркий цвет); проглаживать ее рекомендуется с изнанки не слишком сильно разогретым утюгом.
+                            | Цветопередача может отличаться от оригинального цвета ткани в зависимости от настроек вашего монитора и в зависимости от партии тон ткани может отличаться.
+                        .productPage__features
+                            .productPage__features__wrapper
+                                .productPage__features__wrapper__item
+                                    img.productPage__features__wrapper__item__img(src="img/scissors.svg")
+                                    p.productPage__features__wrapper__item__text
+                                        | Режем ткань
+                                        br
+                                        | от 10 см
+                                .productPage__features__wrapper__item
+                                    img.productPage__features__wrapper__item__img(src="img/plaid.svg")
+                                    p.productPage__features__wrapper__item__text
+                                        | Нет ограничений
+                                        br
+                                        | по минимальнмоу заказу
+                                .productPage__features__wrapper__item
+                                    img.productPage__features__wrapper__item__img(src="img/box.svg")
+                                    p.productPage__features__wrapper__item__text
+                                        | Доставим товар
+                                        br
+                                        | в любую точку мира
+    include ../../components/formFeedback/FormFeedback
+    include ../../chunk/footer/footer
+
+

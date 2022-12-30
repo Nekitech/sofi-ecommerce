@@ -1,0 +1,21 @@
+.shopDescr {
+  margin: 55px 0 75px 0;
+  &__title {
+    width: 800px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 10px 30px;
+    margin: 75px 0 0 0;
+    flex-wrap: wrap;
+
+  }
+
+  &__block {
+    max-width: 320px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 20px;
+  }
+}

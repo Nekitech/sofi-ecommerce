@@ -4,10 +4,11 @@ section.prodsDiscount
             | Товары со скидкой
         include ../../mixins/cardProduct/CardProduct
         .glide.prodsDiscount__slider
-            .glide__track.glide__track(data-glide-el="track")
-                .glide__slides.glide__slides
-                    .glide__slide.glide__slider__slide
+            .glide__track.productsSlider__track(data-glide-el="track")
+                .glide__slides.productsSlider__slides
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -16,8 +17,9 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-                    .glide__slide.glide__slider__slide
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -26,8 +28,9 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-                    .glide__slide.glide__slider__slide
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -36,8 +39,9 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-                    .glide__slide.glide__slider__slide
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -46,8 +50,9 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-                    .glide__slide.glide__slider__slide
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -56,8 +61,9 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-                    .glide__slide.glide__slider__slide
+                    .glide__slide.productsSlider__slider__slide
                         +CardProduct({
+                            link: 'PageProduct.html',
                             img1: 'img/card1MainImg.webp',
                             img2: 'img/card1img2.webp',
                             img3: 'img/card1img3.webp',
@@ -66,8 +72,8 @@ section.prodsDiscount
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
-            .glide__arrows.glide__slider__arrows(data-glide-el="controls")
-                button.glide__arrow.glide__slider__arrow.glide__arrow--left.glide__slider__arrow-left(data-glide-dir='<')
-                    img.glide__arrow__img.glide__slider__arrow__img(src='img/arrowWhite.svg')
-                button.glide__arrow.glide__slider__arrow.glide__arrow--right.glide__slider__arrow-right(data-glide-dir='>')
-                    img.glide__arrow__img.glide__slider__arrow__img(src='img/arrowWhite.svg')
+            .glide__arrows.productsSlider__slider__arrows(data-glide-el="controls")
+                button.glide__arrow.productsSlider__slider__arrow.glide__arrow--left.productsSlider__slider__arrow-left(data-glide-dir='<')
+                    img.glide__arrow__img.productsSlider__slider__arrow__img(src='img/arrowWhite.svg')
+                button.glide__arrow.productsSlider__slider__arrow.glide__arrow--right.productsSlider__slider__arrow-right(data-glide-dir='>')
+                    img.glide__arrow__img.productsSlider__slider__arrow__img(src='img/arrowWhite.svg')

@@ -20,7 +20,7 @@ const Scripts = () => {
             output: {
                 filename: 'bundle.min.js',
             },
-            devtool: pluginsConfig.isDev ? 'source-map' : '',
+            // devtool: pluginsConfig.isDev ? 'source-map' : '',
         }))
         .pipe(dest(path.js.dest))
 }

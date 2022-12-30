@@ -4,8 +4,12 @@
 .card {
   width: 224px;
   height: 320px;
-  background-color: #fff;
+  position: relative;
   padding: 10px 10px 0 0;
+  position: relative;
+  z-index: 4;
+
+
 
 
   &__blockImg {
@@ -48,6 +52,12 @@
         background: url("../img/card1MainImg.webp") no-repeat;
         position: relative;
         z-index: 1;
+      }
+      &__mainImg a {
+        width: 100%;
+        height: 100%;
+        display: block;
+
       }
 
       &__mainImg:after {
@@ -178,14 +188,18 @@
   display: block;
 }
 
-.card:hover {
-  position: absolute;
+.card:hover  {
+
   width: 300px;
   height: auto;
   padding: 20px 35px 10px 10px;
-  z-index: 40;
   background-color: #fff;
   transform: translateX(-60px);
+}
+.card:hover .card__inner {
+  position: fixed;
+  z-index: 5;
+  background-color: #fff;
 }
 
 .card:hover .card__blockInfo__table {
@@ -193,7 +207,9 @@
   border: 1px solid #f0f0f0;
   border-collapse: collapse;
 }
-
+.card .counter {
+  display: none;
+}
 .card:hover .counter {
   display: flex;
 }

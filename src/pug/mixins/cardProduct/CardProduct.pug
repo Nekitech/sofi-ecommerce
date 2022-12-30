@@ -1,46 +1,48 @@
 mixin CardProduct(data)
     .card
-        .card__blockImg
-            .card__blockImg__switchesImgs
-                img.card__blockImg__switchesImgs__img(src=data.img1)
-                img.card__blockImg__switchesImgs__img(src=data.img2)
-                img.card__blockImg__switchesImgs__img(src=data.img3)
-                .card__blockImg__switchesImgs__mainImg
-        .card__blockInfo
-            h3.card__blockInfo__title
-                | #{data.title}
-            .card__blockInfo__price
-                p.card__blockInfo__price__new
-                    | #{data.priceNew}
-                p.card__blockInfo__price__prev
-                    | #{data.pricePrev}
-            table.card__blockInfo__table
-                tr.card__blockInfo__table__row
-                    td.card__blockInfo__table__row__cell
-                        | Состав
-                    td.card__blockInfo__table__row__cell
-                        | Хлопок 100%
-                tr.card__blockInfo__table__row
-                    td.card__blockInfo__table__row__cell
-                        | Ширина
-                    td.card__blockInfo__table__row__cell
-                        | 1,5 м
-                tr.card__blockInfo__table__row
-                    td.card__blockInfo__table__row__cell
-                        | Плотность
-                    td.card__blockInfo__table__row__cell
-                        | 235 гр/м2
-                tr.card__blockInfo__table__row
-                    td.card__blockInfo__table__row__cell
-                        | Страна производитель
-                    td.card__blockInfo__table__row__cell
-                        | Россия
-            include ../../components/counterCard/CounterCard
-            .card__blockInfo__btns
-                button.card__blockInfo__btns__btn
-                    a(href='#')
-                        | В корзину
-                a.card__blockInfo__btns__fav
-                    img.card__blockInfo__btns__btn__favImg(src='img/like-empty.svg')
+        .card__inner
+            .card__blockImg
+                .card__blockImg__switchesImgs
+                    img.card__blockImg__switchesImgs__img(src=data.img1)
+                    img.card__blockImg__switchesImgs__img(src=data.img2)
+                    img.card__blockImg__switchesImgs__img(src=data.img3)
+                    .card__blockImg__switchesImgs__mainImg
+                        a(href=data.link)
+            .card__blockInfo
+                h3.card__blockInfo__title
+                    | #{data.title}
+                .card__blockInfo__price
+                    p.card__blockInfo__price__new
+                        | #{data.priceNew}
+                    p.card__blockInfo__price__prev
+                        | #{data.pricePrev}
+                table.card__blockInfo__table
+                    tr.card__blockInfo__table__row
+                        td.card__blockInfo__table__row__cell
+                            | Состав
+                        td.card__blockInfo__table__row__cell
+                            | Хлопок 100%
+                    tr.card__blockInfo__table__row
+                        td.card__blockInfo__table__row__cell
+                            | Ширина
+                        td.card__blockInfo__table__row__cell
+                            | 1,5 м
+                    tr.card__blockInfo__table__row
+                        td.card__blockInfo__table__row__cell
+                            | Плотность
+                        td.card__blockInfo__table__row__cell
+                            | 235 гр/м2
+                    tr.card__blockInfo__table__row
+                        td.card__blockInfo__table__row__cell
+                            | Страна производитель
+                        td.card__blockInfo__table__row__cell
+                            | Россия
+                include ../../components/counterCard/CounterCard
+                .card__blockInfo__btns
+                    button.card__blockInfo__btns__btn
+                        a(href='#')
+                            | В корзину
+                    a.card__blockInfo__btns__fav
+                        img.card__blockInfo__btns__btn__favImg(src='img/like-empty.svg')
 
 

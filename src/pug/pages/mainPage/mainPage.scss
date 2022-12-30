@@ -1,6 +1,10 @@
 @import "../../components/previewSlider/PreviewSlider";
 @import '../../components/allProducts/AllProducts';
 @import '../../components/productWithDiscount/ProductWithDiscount';
+@import '../../components/leadersSells/LeadersSells.scss';
+@import '../../components/shopDescr/ShopDescr';
+
+
 .main {
   position: relative;
   z-index: 1;

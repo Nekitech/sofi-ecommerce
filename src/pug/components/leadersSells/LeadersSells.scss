@@ -1,0 +1,19 @@
+@import '../../mixins/cardProduct/CardProduct.scss';
+
+
+
+.leadersSells {
+    width: 100%;
+    height: auto;
+    background-color: rgba(187,157,96,.1);
+
+
+    &__wrapper {
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 30px;
+    }
+
+}
