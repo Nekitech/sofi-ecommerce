@@ -1,5 +1,4 @@
 
-
 .feedback {
   background-color: #f1ebdf;
   width: 100vw;
@@ -10,14 +9,17 @@
     display: flex;
 
   }
+
   &__title {
     margin-bottom: 40px;
   }
+
   &__list {
 
     &__item {
       list-style: none;
     }
+
     &__item::before {
       content: "\2022";
       color: #8b008b;
@@ -26,11 +28,13 @@
       width: 1em;
       margin-left: -1em;
     }
+
     &__item:nth-child(1) span {
       color: #8b008b;
       font-size: 26px;
     }
   }
+
   &__form {
     min-width: 400px;
     height: auto;
@@ -90,7 +94,13 @@
       justify-content: center;
 
       align-items: center;
-      transition: all .3s;
+      transition: 0.3s all;
+    }
+
+    &__button:hover {
+      opacity: 50%;
+      transition: 0.3s all;
     }
   }
+
 }

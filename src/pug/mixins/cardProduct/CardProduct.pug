@@ -2,10 +2,10 @@ mixin CardProduct(data)
     .card
         .card__blockImg
             .card__blockImg__switchesImgs
-                img.card__blockImg__switchesImgs__img(src=data.img1)
-                img.card__blockImg__switchesImgs__img(src=data.img2)
-                img.card__blockImg__switchesImgs__img(src=data.img3)
-                .card__blockImg__switchesImgs__mainImg
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img1)
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img2)
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img3)
+                .card__blockImg__switchesImgs__mainImg.mainImg
                     img(src=data.mainImg)
                     a(href=data.link)
         .card__blockInfo

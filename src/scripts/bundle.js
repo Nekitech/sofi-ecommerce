@@ -39,4 +39,5 @@ counters.forEach(counter => {
     new Counter(counter, counter.previousElementSibling, counter.nextElementSibling, 0, 1);
 })
 
-switchImgs();
+switchImgs('.card', {hover: true, click: false});
+switchImgs('.productPage__imgs', {hover: false, click: true});
