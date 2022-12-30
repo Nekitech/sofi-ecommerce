@@ -29,7 +29,7 @@ module.exports = {
     },
 
     js: {
-        src: [pathSrc + '/scripts/bundle.js', pathSrc + '/scripts/secondPage.js'],
+        src: pathSrc + '/scripts/bundle.js',
         watch: pathSrc + '/scripts/*.js',
         dest: pathDest + '/js'
     },
