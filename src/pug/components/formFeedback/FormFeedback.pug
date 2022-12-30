@@ -1,14 +1,22 @@
-section.feedBack
+section.feedback
     .container
-        .feedBack_wrapper
+        .feedback__wrapper
             .feedback__text
                 h3.feedback__title
                     | Мы открыты для своих покупателей
                     br
                     | Поэтому вы всегда можете:
+                ul.feedback__list
+                    li.feedback__list__item
+                        | позвонить нам и получить помощь в оформлении заказа
+                        br
+                        span 8 (800) 700-09-43
+                    li.feedback__list__item
+                        | задать любой интересующий вопрос через форму
+                        | Отправляя вопрос вы принимаете условия Политики защиты персональной информации
             .feedback__form
                 .feedback__form__wrapper
-                    input.feedback__form__input(type='number' placeholder='Введите ваш телефон')
+                    input.feedback__form__input(type='text' placeholder='Введите ваш телефон')
                     textarea.feedback__form__textarea(placeholder='Напишите свой вопрос')
                     button.feedback__form__button
                         | Задать вопрос

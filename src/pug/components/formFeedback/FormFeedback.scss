@@ -1,8 +1,96 @@
 
 
-.feedBack {
+.feedback {
   background-color: #f1ebdf;
   width: 100vw;
   height: auto;
   padding: 45px 0 50px 0;
+
+  &__wrapper {
+    display: flex;
+
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+
+    &__item {
+      list-style: none;
+    }
+    &__item::before {
+      content: "\2022";
+      color: #9f2925;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    &__item:nth-child(1) span {
+      color: #9f2925;
+      font-size: 26px;
+    }
+  }
+  &__form {
+    min-width: 400px;
+    height: auto;
+    background-color: #fff;
+    padding: 35px 50px 35px 50px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 25px 0;
+    }
+
+    &__input {
+      padding: 25px 25px 8px;
+      font-size: 16px;
+      display: inline-block;
+      height: 56px;
+      border: 1px solid #f0f0f0;
+      color: #000;
+      background: 0 0;
+      outline: none;
+    }
+
+    &__textarea {
+      width: 100%;
+      height: 100px;
+      resize: none;
+
+      padding: 25px 25px 8px;
+      font-size: 16px;
+      display: inline-block;
+
+      border: 1px solid #f0f0f0;
+      color: #000;
+      background: 0 0;
+      outline: none;
+    }
+
+    &__button {
+      background: #9f2925;
+      color: #fff;
+      width: 100%;
+      height: 48px;
+
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      outline: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      padding: 0 5px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+      transition: all .3s;
+    }
+  }
 }

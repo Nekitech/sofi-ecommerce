@@ -3,9 +3,9 @@ section.allProducts
         h3.titleSection.allProducts__title
             | Все товары
         include ../../mixins/cardProduct/CardProduct
-        .glide.allProducts__slider
+        .glide.product__slider
             .glide__track.productsSlider__track(data-glide-el="track")
-                .glide__slides
+                .glide__slides.productsSlider__slides
                     .glide__slide.productsSlider__slider__slide
                         +CardProduct({
                             link: 'PageProduct.html',

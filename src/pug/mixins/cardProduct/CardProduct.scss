@@ -4,12 +4,9 @@
 .card {
   width: 224px;
   height: 320px;
-  position: relative;
   padding: 10px 10px 0 0;
   position: relative;
   z-index: 4;
-
-
 
 
   &__blockImg {
@@ -189,18 +186,17 @@
 }
 
 .card:hover  {
-
   width: 300px;
   height: auto;
-  padding: 20px 35px 10px 10px;
   background-color: #fff;
   transform: translateX(-60px);
-}
-.card:hover .card__inner {
-  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
   z-index: 5;
-  background-color: #fff;
+
+  padding: 20px 35px 10px 10px;
 }
+
 
 .card:hover .card__blockInfo__table {
   display: table;

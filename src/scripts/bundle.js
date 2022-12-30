@@ -7,10 +7,7 @@ const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
 
 
-
-
-
-new Glide('.glide', {
+new Glide('.glide.slider-glide', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
@@ -18,21 +15,22 @@ new Glide('.glide', {
 
 
 }).mount()
+document.addEventListener('DOMContentLoaded', function () {
 
-new Glide('.glide.allProducts__slider', {
-    type: 'slider',
-    startAt: 0,
-    perView: 5,
-    gap: 20,
-    bound: true,
-}).mount()
-new Glide('.glide.prodsDiscount__slider', {
-    type: 'slider',
-    startAt: 0,
-    perView: 5,
-    gap: 20,
-    bound: true,
-}).mount()
+    const sliders = document.querySelectorAll('.glide.product__slider');
+    sliders.forEach(slider => {
+       new Glide(slider, {
+            type: 'slider',
+            startAt: 0,
+            perView: 5,
+            gap: 20,
+            bound: true,
+        }).mount()
+    })
+})
+
+
+
 
 const counters = document.querySelectorAll('.counter__input');
 counters.forEach(counter => {
