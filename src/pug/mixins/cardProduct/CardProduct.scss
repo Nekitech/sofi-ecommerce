@@ -47,6 +47,7 @@
         width: 180px;
         height: 240px;
         background: url("../img/card1MainImg.webp") no-repeat;
+        background-size: cover;
         position: relative;
         z-index: 1;
       }
@@ -68,27 +69,31 @@
         padding: 7px 0;
         text-align: center;
         background-color: #bb9d60;
-        color: #9f2925;
+        color: #8b008b;
       }
 
       &__img:hover {
         cursor: pointer;
         padding: 5px;
-        border: 2px solid #9f2925;
+        border: 2px solid #8b008b;
         transform: scale(1.18);
       }
 
       &__img:nth-child(1):hover ~ &__mainImg {
         background: url("../img/card1MainImg.webp") no-repeat;
+        background-size: cover;
+
       }
 
       &__img:nth-child(2):hover ~ &__mainImg {
         background: url("../img/card1Img2.webp") no-repeat;
+        background-size: cover;
 
       }
 
       &__img:nth-child(3):hover ~ &__mainImg {
         background: url("../img/card1Img3.webp") no-repeat;
+        background-size: cover;
       }
     }
 
@@ -116,7 +121,7 @@
       gap: 0 20px;
 
       &__new {
-        color: #9f2925;
+        color: #8b008b;
       }
 
       &__prev {
@@ -155,7 +160,7 @@
 
       &__btn {
         padding: 0 5px;
-        background-color: #9f2925;
+        background-color: #8b008b;
         border: none;
         width: 197px;
         height: 48px;
