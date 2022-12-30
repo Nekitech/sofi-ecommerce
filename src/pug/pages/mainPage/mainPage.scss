@@ -23,6 +23,9 @@
     background-color: #fff;
 
   }
+  &__blocks__item:nth-child(2) img {
+    object-fit: fill;
+  }
   &__blocks__item:nth-child(3) img {
     object-fit: fill;
   }

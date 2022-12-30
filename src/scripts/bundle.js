@@ -2,6 +2,7 @@ import {hideMenuData} from "./dataMarket";
 import {hideMenuHandler} from "./hide_menu";
 import Glide from '@glidejs/glide'
 import Counter from "./counterCard";
+import {switchImgs} from "./switchImgs";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -37,3 +38,5 @@ const counters = document.querySelectorAll('.counter__input');
 counters.forEach(counter => {
     new Counter(counter, counter.previousElementSibling, counter.nextElementSibling, 0, 1);
 })
+
+switchImgs();

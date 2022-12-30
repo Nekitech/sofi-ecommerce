@@ -21,10 +21,7 @@ $colorTitle: #8b008b;
 
 }
 
-.slider-guide {
 
-
-}
 
 .glide__bullet.slider-glide__bullet.glide__bullet--active {
   background-color: $colorSilderBuller;
@@ -60,4 +57,13 @@ $colorTitle: #8b008b;
 }
 .glide__arrow--right.slider-guide__arrow-right {
   right: -20px;
+}
+
+.glide__slide.previewSlider__slide {
+  height: 370px;
+}
+.glide__slide.previewSlider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
