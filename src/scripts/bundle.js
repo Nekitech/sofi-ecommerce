@@ -6,20 +6,23 @@ import Counter from "./counterCard";
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
 
+const carousel = document.querySelector('.glide.slider-glide');
+if (carousel) {
 
-new Glide('.glide.slider-glide', {
-    type: 'carousel',
-    startAt: 0,
-    perView: 1,
-    autoplay: 3000,
+    new Glide(carousel, {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+        autoplay: 3000,
 
 
-}).mount()
+    }).mount()
+}
 document.addEventListener('DOMContentLoaded', function () {
 
     const sliders = document.querySelectorAll('.glide.product__slider');
     sliders.forEach(slider => {
-       new Glide(slider, {
+        new Glide(slider, {
             type: 'slider',
             startAt: 0,
             perView: 5,
@@ -28,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }).mount()
     })
 })
-
-
 
 
 const counters = document.querySelectorAll('.counter__input');
