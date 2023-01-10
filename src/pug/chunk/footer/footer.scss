@@ -4,6 +4,8 @@
   width: 100vw;
   height: auto;
   padding: 50px 0 40px 0;
+  position: relative;
+  bottom: 0;
 
   &__wrapper {
     display: flex;
