@@ -1,8 +1,4 @@
 
-const inputCounter = document.querySelector('.counter__input');
-const decrBtn = document.querySelector('.counter__btn--decr');
-const incrBtn = document.querySelector('.counter__btn--incr');
-
 export default class Counter {
     constructor(input, decrBtn, incrBtn, min = 0, max = 1) {
         this.input = input;

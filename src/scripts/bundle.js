@@ -3,6 +3,8 @@ import {hideMenuHandler} from "./hide_menu";
 import Glide from '@glidejs/glide'
 import Counter from "./counterCard";
 import {switchImgs} from "./switchImgs";
+import BurgerMenu from "./burgerMenu";
+import DropDown from "./dropDown";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -41,3 +43,22 @@ counters.forEach(counter => {
 
 switchImgs('.card', {hover: true, click: false});
 switchImgs('.productPage__imgs', {hover: false, click: true});
+
+
+//burger
+
+const burger = document.querySelector('.burgerBtn');
+const menu = document.querySelector('.burgerMenu');
+if (burger) {
+    new BurgerMenu(menu, burger);
+}
+
+
+//dropDown
+const dropdownList = document.querySelectorAll('.dropDown');
+
+if(dropdownList) {
+    dropdownList.forEach(dropdown => {
+        new DropDown(dropdown).init();
+    })
+}

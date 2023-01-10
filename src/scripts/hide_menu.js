@@ -11,6 +11,8 @@ export const hideMenuHandler = (hideMenu, data) => {
     const menuList = document?.querySelectorAll('.header__menu__link')
 
     menuList?.forEach((item) => {
+        if(data[item.textContent]) item.classList.add('activeHideList');
+
         item.addEventListener('mouseover', (e) => {
             wrapper.innerHTML = '';
             const textItem = e.target.textContent;

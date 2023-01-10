@@ -4,7 +4,7 @@ header.header
             .header__topLine
                 ul.header__topLine__nav
                     li.header__topLine__navItem
-                        a.header__topLine__navLink(href='#') О магазине
+                        a.header__topLine__navLink(href='index.html') О магазине
                     li.header__topLine__navItem
                         a.header__topLine__navLink(href='#') Как купить
                     li.header__topLine__navItem
@@ -12,17 +12,20 @@ header.header
                     li.header__topLine__navItem
                         a.header__topLine__navLink(href='#') Доставка
                     li.header__topLine__navItem
-                        a.header__topLine__navLink(href='#') Контакты
+                        a.header__topLine__navLink(href='contactsPage.html') Контакты
                     li.header__topLine__navItem
                         a.header__topLine__navLink(href='#') Отзывы
-                .header__topLine__favorites
-                    a.header__topLine__favoritesLink(href='#')
-                        img.header__topLine__favoritesIcon(src='img/heartFav.svg')
-                        span.header__topLine__favoritesText Избранное (0)
                 .header__topLine__number
                     | Бесплатно по РФ
                     a(href='+7 (999) 999-09-43').header__topLine__numberLink
                         | +7 (999) 999-09-43
+                .burgerBtn
+                    .burgerBtn__line
+                    .burgerBtn__line
+                    .burgerBtn__line
+                .header__topLine__logo.logo
+                    a(href='index.html').logo__link
+                        img.logo__img(src='img/logo.webp')
             .header__main
                 .header__logo.logo
                     a(href='index.html').logo__link
@@ -41,6 +44,8 @@ header.header
                             span.header__userBlock__cartText Моя корзина
                                 span.header__userBlock__cartPrice 0 руб.
                             span.header__userBlock__positions 0 позиций
+        include ../../components/burgerMenu/burgerMenu
+
     .header__menu
         ul.header__menu__list
             li.header__menu__item
@@ -55,5 +60,6 @@ header.header
                 a.header__menu__link(href='#') Шторы, тюль, портьеры
             li.header__menu__item
                 a.header__menu__link(href='#') Эксклюзивные турецкие ткани
+
 
     include ../../components/HideList/HideList

@@ -2,11 +2,11 @@ mixin CardProduct(data)
     .card
         .card__blockImg
             .card__blockImg__switchesImgs
-                img.card__blockImg__switchesImgs__img.smallImg(src=data.img1)
-                img.card__blockImg__switchesImgs__img.smallImg(src=data.img2)
-                img.card__blockImg__switchesImgs__img.smallImg(src=data.img3)
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img1 alt='product')
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img2 alt='product')
+                img.card__blockImg__switchesImgs__img.smallImg(src=data.img3 alt='product')
                 .card__blockImg__switchesImgs__mainImg.mainImg
-                    img(src=data.mainImg)
+                    img(src=data.mainImg alt='product')
                     a(href=data.link)
         .card__blockInfo
             h3.card__blockInfo__title
@@ -43,6 +43,6 @@ mixin CardProduct(data)
                     a(href='#')
                         | В корзину
                 a.card__blockInfo__btns__fav
-                    img.card__blockInfo__btns__btn__favImg(src='img/like-empty.svg')
+                    img.card__blockInfo__btns__btn__favImg(src='img/like-empty.svg' alt='like')
 
 

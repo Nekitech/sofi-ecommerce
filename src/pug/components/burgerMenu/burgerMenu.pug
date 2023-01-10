@@ -1,0 +1,42 @@
+.burgerMenu
+    .burgerMenu__wrapper
+        form.burgerMenu__searchForm.header__searchForm
+            input.header__searchForm__input(type='text' placeholder='Поиск по каталогу')
+            button.header__searchForm__button
+                img.header__searchForm__buttonIcon(src='img/searchIcon.webp' alt='icon')
+        ul.burgerMenu__list
+            li.burgerMenu__item
+                a.burgerMenu__link(href='index.html') 100% хлопок
+            li.burgerMenu__item
+                a.burgerMenu__link(href='#') Натуральные
+            li.burgerMenu__item
+                a.burgerMenu__link(href='index.html') Постельные
+            li.burgerMenu__item
+                a.burgerMenu__link(href='#') Детские
+            li.burgerMenu__item.burger__dropDown.dropDown
+                a.burgerMenu__link(href='#') Шторы, тюль, портьеры
+                ul.burgerMenu__dropDown__hideList
+                    li.burgerMenu__dropDown__item
+                        a.burgerMenu__dropDown__link(href='#') Шторы
+                    li.burgerMenu__dropDown__item
+                        a.burgerMenu__dropDown__link(href='#') Тюль
+                    li.burgerMenu__dropDown__item
+                        a.burgerMenu__dropDown__link(href='#') Портьеры
+            li.burgerMenu__item
+                a.burgerMenu__link(href='#') Эксклюзивные турецкие ткани
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='#') О компании
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='#') Как купить
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='#') Оплата
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='#') Доставка
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='contactsPage.html') Контакты
+            li.burgerMenu__navItem
+                a.burgerMenu__link(href='#') Отзывы
+        .burgerMenu__number
+            | Бесплатно по РФ
+            a(href='+7 (999) 999-09-43').header__topLine__numberLink
+                | +7 (999) 999-09-43
