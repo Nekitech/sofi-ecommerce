@@ -1990,6 +1990,8 @@ body.activeBurger {
   width: 100%;
   height: auto;
   gap: 0 30px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .productPage__info {
@@ -2413,6 +2415,18 @@ body.activeBurger {
 }
 }
 
+@media (max-width: 1010px) {
+  .productPage__wrapper {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
 @media (max-width: 1000px) {
   .burgerBtn {
     display: -webkit-box;
@@ -2492,6 +2506,23 @@ body.activeBurger {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     gap: 50px 0;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 630px) {
+  .productPage__data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .productPage__choice {
+    width: 100%;
   }
 
 @supports (-webkit-appearance:none) {

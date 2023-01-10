@@ -17,6 +17,7 @@
     width: 100%;
     height: auto;
     gap: 0 30px;
+    flex-wrap: wrap;
   }
   &__info {
     display: flex;
@@ -151,4 +152,22 @@
     width: 100%;
   }
 
+}
+
+@media(max-width: 1010px) {
+  .productPage {
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+}
+@media(max-width: 630px) {
+  .productPage {
+    &__data {
+      flex-direction: column-reverse;
+    }
+    &__choice {
+      width: 100%;
+    }
+  }
 }

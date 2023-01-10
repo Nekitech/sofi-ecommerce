@@ -16,7 +16,7 @@ if (carousel) {
         type: 'carousel',
         startAt: 0,
         perView: 1,
-        autoplay: 3000,
+        autoplay: 5000,
 
 
     }).mount()
@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 460: {
                     perView: 1,
                 }
-            }
+            },
+            rewind: false
         }).mount()
     })
 })
