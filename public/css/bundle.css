@@ -109,7 +109,7 @@ button {
 }
 
 .glide__track.productsSlider__track {
-  height: 720px;
+  height: 700px;
 }
 
 .glide.productsSlider__slider {
@@ -1472,7 +1472,7 @@ body.activeBurger {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 60px 30px;
+  gap: 120px 30px;
 }
 
 .leadersSells__item {
