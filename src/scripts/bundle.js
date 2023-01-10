@@ -31,6 +31,20 @@ document.addEventListener('DOMContentLoaded', function () {
             perView: 5,
             gap: 20,
             bound: true,
+            breakpoints: {
+                1000: {
+                    perView: 4,
+                },
+                900: {
+                    perView: 3,
+                },
+                650: {
+                    perView: 2,
+                },
+                460: {
+                    perView: 1,
+                }
+            }
         }).mount()
     })
 })

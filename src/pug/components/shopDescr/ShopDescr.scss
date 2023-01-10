@@ -1,8 +1,11 @@
 .shopDescr {
   margin: 55px 0 75px 0;
+
   &__title {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
   }
+
   &__wrapper {
     display: flex;
     gap: 10px 30px;
@@ -18,4 +21,21 @@
     align-items: flex-start;
     gap: 0 20px;
   }
+}
+
+@media (max-width: 1040px) {
+  .shopDescr {
+    &__wrapper {
+      justify-content: center;
+      gap: 40px 30px;
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+  .shopDescr {
+    padding: 0 5px;
+  }
+
 }

@@ -7,11 +7,15 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
 
   }
 
   &__title {
     margin-bottom: 40px;
+  }
+  &__text {
+    flex: 50%;
   }
 
   &__list {

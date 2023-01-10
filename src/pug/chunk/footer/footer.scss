@@ -11,6 +11,10 @@
     align-items: center;
     gap: 0 150px;
   }
+  &__blockProducts {
+    display: flex;
+    gap: 0 50px;
+  }
   &__listsNav {
     display: flex;
     flex-direction: column;
@@ -55,5 +59,18 @@
     align-items: center;
     justify-content: center;
   }
+
+}
+@media (max-width: 675px) {
+    .footer {
+        &__wrapper {
+        flex-direction: column-reverse;
+        gap: 50px 0;
+        }
+        &__blockProducts {
+
+        }
+
+    }
 
 }
