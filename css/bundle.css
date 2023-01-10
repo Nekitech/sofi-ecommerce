@@ -102,7 +102,7 @@ button {
 }
 
 .glide__track.productsSlider__track {
-  height: 650px;
+  height: 720px;
 }
 
 .glide.productsSlider__slider {
@@ -182,15 +182,16 @@ button {
   transform: translateX(-50%);
   background-color: #fff;
   z-index: 3;
+  padding: 10px;
 }
 
 .hide-list__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .hide-list.activeHideMenu {
@@ -512,7 +513,7 @@ button {
   transition: 0.3s ease-in;
 }
 
-.header__menu__link:hover:after {
+.header__menu__link.activeHideList:hover:after {
   -webkit-transform: rotate(180deg) translateY(5px);
   -ms-transform: rotate(180deg) translateY(5px);
   transform: rotate(180deg) translateY(5px);
@@ -530,7 +531,7 @@ button {
   transition: 0.3s ease-in;
 }
 
-.header__menu__link:after {
+.header__menu__link.activeHideList:after {
   content: "";
   background: url("../img/arrowWhite.svg") no-repeat;
   position: absolute;
@@ -1749,6 +1750,10 @@ button {
   margin: 100px 0 80px 0;
 }
 
+.productPage__product {
+  margin-bottom: 80px;
+}
+
 .productPage__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2131,11 +2136,11 @@ button {
     background: url("../img/cartIcon.svg") no-repeat;
   }
 
-  .header__menu__link:hover:after {
+  .header__menu__link.activeHideList:hover:after {
     background: url("../img/arrowHideListsGold.svg") no-repeat;
   }
 
-  .header__menu__link:after {
+  .header__menu__link.activeHideList:after {
     background: url("../img/arrowWhite.svg") no-repeat;
   }
 }
