@@ -21,6 +21,12 @@ body {
   min-width: 100vw;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .logo {
   width: 275px;
   height: 66px;
@@ -346,6 +352,10 @@ button {
 
 body.activeBurger {
   overflow-y: hidden;
+}
+
+.header {
+  width: 100%;
 }
 
 .header__topLine {
@@ -1508,6 +1518,7 @@ body.activeBurger {
 .main {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .main__blocks {
@@ -1962,6 +1973,7 @@ body.activeBurger {
 
 .productPage {
   margin: 100px 0 80px 0;
+  width: 100%;
 }
 
 .productPage__product {
@@ -2143,6 +2155,30 @@ body.activeBurger {
 }
 
 .productPage__list {
+  width: 100%;
+}
+
+.contactsPage {
+  width: 100%;
+}
+
+.reviews {
+  width: 100%;
+}
+
+.delivery {
+  width: 100%;
+}
+
+.payment {
+  width: 100%;
+}
+
+.howToBuy {
+  width: 100%;
+}
+
+.bucket {
   width: 100%;
 }
 
