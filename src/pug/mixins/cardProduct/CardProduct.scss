@@ -170,6 +170,12 @@
         width: 197px;
         height: 48px;
         transition: 0.3s all;
+
+        font-weight: 700;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #fff;
       }
 
       &__btn:hover {
@@ -177,15 +183,6 @@
         transition: 0.3s all;
       }
 
-      &__btn a {
-        font-weight: 700;
-        text-align: center;
-        font-size: 14px;
-        letter-spacing: 1px;
-        padding: 0 5px;
-        color: #fff;
-
-      }
     }
   }
 

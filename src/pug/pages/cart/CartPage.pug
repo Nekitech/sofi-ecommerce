@@ -1,0 +1,79 @@
+extends ../../layout/layout
+block page
+    include ../../chunk/header/header
+    main.cart
+        .container
+            .cart__wrapper
+                h1.cart__title
+                    | Ваша корзина
+                .cart__content
+                    .cart__content__left
+                        p.cart__content__text
+                            | Проверьте наличие всех необходимых товаров в корзине, если всё верно,
+                            | перейдите к оформлению заказа
+                        table.cart__content__tableCart
+                            thead.cart__content__tableCart__head
+                                tr.cart__content__tableCart__row
+                                    th.cart__content__tableCart__cell
+                                        | Фото товара
+                                    th.cart__content__tableCart__cell
+                                        | Название товара
+                                    th.cart__content__tableCart__cell
+                                        | Цена
+                                    th.cart__content__tableCart__cell
+                                        | Длина
+                                    th.cart__content__tableCart__cell
+                                        | Итого
+                            tbody.cart__content__tableCart__body
+                                tr.cart__content__tableCart__row
+                                    td.cart__content__tableCart__cell
+                                        | Товар 1
+                                    td.cart__content__tableCart__cell
+                                        | ткань
+                                    td.cart__content__tableCart__cell
+                                        | 1000 руб.
+                                    td.cart__content__tableCart__cell
+                                        | 0.2 метра
+                                    td.cart__content__tableCart__cell
+                                        | 200 руб.
+                                tr.cart__content__tableCart__row
+                                    td.cart__content__tableCart__cell
+                                        | Товар 1
+                                    td.cart__content__tableCart__cell
+                                        | ткань
+                                    td.cart__content__tableCart__cell
+                                        | 1000 руб.
+                                    td.cart__content__tableCart__cell
+                                        | 0.2 метра
+                                    td.cart__content__tableCart__cell
+                                        | 200 руб.
+                                tr.cart__content__tableCart__row
+                                    td.cart__content__tableCart__cell
+                                        | Товар 1
+                                    td.cart__content__tableCart__cell
+                                        | ткань
+                                    td.cart__content__tableCart__cell
+                                        | 1000 руб.
+                                    td.cart__content__tableCart__cell
+                                        | 0.2 метра
+                                    td.cart__content__tableCart__cell
+                                        | 200 руб.
+
+                    .cart__content__right
+                        .cart_content__cartInfo
+                            h3.cart__content__cartInfo__title
+                                | Ваша корзина
+                            .cart__content__cartInfo__numberProducts
+                                p.cart__content__cartInfo__numberProducts__name | Количество товаров
+                                p.cart__content__cartInfo__numberProducts__value | 3 товара
+                            .cart__content__cartInfo__totalPrice
+                                p.cart__content__cartInfo__totalPrice__name Итого к оплате
+                                p.cart__content__cartInfo__totalPrice__value 125 руб.
+                            button.cart__content__cartInfo__btn
+                                | Перейти к оформлению
+
+
+
+
+
+    include ../../chunk/footer/footer

@@ -31,7 +31,9 @@ const watcher = () => {
 const server = () => {
     browserSync.init({
         server: {
-            baseDir: path.root
+            baseDir: path.root,
+            notify: false
+
         }
     }) 
 }

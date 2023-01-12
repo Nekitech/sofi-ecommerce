@@ -5,6 +5,7 @@ import Counter from "./counterCard";
 import {switchImgs} from "./switchImgs";
 import BurgerMenu from "./burgerMenu";
 import DropDown from "./dropDown";
+import {handlerAddProductInCart} from "./backend/addProductInCart";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -77,3 +78,7 @@ if(dropdownList) {
         new DropDown(dropdown).init();
     })
 }
+
+//handlerAddProductInCart();
+
+handlerAddProductInCart()

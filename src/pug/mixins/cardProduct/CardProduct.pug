@@ -39,8 +39,7 @@ mixin CardProduct(data)
                         | Россия
             include ../../components/counterCard/CounterCard
             .card__blockInfo__btns
-                button.card__blockInfo__btns__btn
-                    a(href='#')
+                button.card__blockInfo__btns__btn(data-cart)
                         | В корзину
                 a.card__blockInfo__btns__fav
                     img.card__blockInfo__btns__btn__favImg(src='img/like-empty.svg' alt='like')

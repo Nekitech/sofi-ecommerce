@@ -1,0 +1,23 @@
+.cart {
+  width: 100%;
+
+  &__wrapper {
+    margin: 50px 0 0 0;
+  }
+
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+
+
+    &__text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+    }
+
+  }
+}

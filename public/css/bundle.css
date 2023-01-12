@@ -1122,6 +1122,11 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
 .card__blockInfo__btns__btn:hover {
@@ -1129,15 +1134,6 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
-}
-
-.card__blockInfo__btns__btn a {
-  font-weight: 700;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding: 0 5px;
-  color: #fff;
 }
 
 .card:hover .card__blockImg__switchesImgs img {
@@ -1396,6 +1392,11 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
 .card__blockInfo__btns__btn:hover {
@@ -1403,15 +1404,6 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
-}
-
-.card__blockInfo__btns__btn a {
-  font-weight: 700;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding: 0 5px;
-  color: #fff;
 }
 
 .card:hover .card__blockImg__switchesImgs img {
@@ -1910,6 +1902,11 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
 .card__blockInfo__btns__btn:hover {
@@ -1917,15 +1914,6 @@ body.activeBurger {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
-}
-
-.card__blockInfo__btns__btn a {
-  font-weight: 700;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding: 0 5px;
-  color: #fff;
 }
 
 .card:hover .card__blockImg__switchesImgs img {
@@ -1971,6 +1959,7 @@ body.activeBurger {
 .productPage {
   margin: 100px 0 80px 0;
   width: 100%;
+  position: relative;
 }
 
 .productPage__product {
@@ -2177,8 +2166,24 @@ body.activeBurger {
   width: 100%;
 }
 
-.bucket {
+.cart {
   width: 100%;
+}
+
+.cart__wrapper {
+  margin: 50px 0 0 0;
+}
+
+.cart__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.cart__content__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
 }
 
 .glide {
