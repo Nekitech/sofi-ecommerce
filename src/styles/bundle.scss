@@ -7,6 +7,9 @@
 @import '../pug/chunk/header/header.scss';
 @import '../pug/chunk/footer/footer.scss';
 
+//templates
+@import "../pug/templates/popup/popup.scss";
+
 //pages
 @import '../pug/pages/mainPage/mainPage.scss';
 @import '../pug/pages/pageProduct/PageProduct.scss';

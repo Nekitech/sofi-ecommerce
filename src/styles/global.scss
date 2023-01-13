@@ -12,16 +12,20 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: scroll;
   font-family: Roboto, sans-serif;
   min-width: 100vw;
 
 }
-html, body {width:100%; overflow-x:hidden}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden
+}
+
 .logo {
   width: 275px;
   height: 66px;
+
   &__img {
     width: 100%;
     height: 100%;
@@ -35,9 +39,11 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 ul, li {
   list-style: none;
 }
+
 button {
   cursor: pointer;
   outline: none;
@@ -54,6 +60,7 @@ button {
   margin: 0 auto 30px auto;
 
 }
+
 .titleSection:before {
   content: '';
   display: block;
@@ -64,6 +71,7 @@ button {
   height: 3px;
   background: url("../img/title_line.svg") no-repeat;
 }
+
 .titleSection:after {
   content: '';
   display: block;
@@ -92,13 +100,16 @@ button {
   overflow: visible;
   height: auto;
 }
+
 .glide__track.productsSlider__track {
 
   height: 700px;
 }
+
 .glide.productsSlider__slider {
   position: relative;
 }
+
 .glide__arrows.productsSlider__slider__arrows {
   position: absolute;
   top: 150px;
@@ -132,9 +143,11 @@ button {
 .glide__arrow--right.productsSlider__slider__arrow-right img {
   transform: rotate(-90deg);
 }
+
 .glide__arrow--left.productsSlider__slider__arrow-left {
   left: -10px;
 }
+
 .glide__arrow--right.productsSlider__slider__arrow-right {
   right: -20px;
 }

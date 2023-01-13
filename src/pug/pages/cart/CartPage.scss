@@ -10,7 +10,18 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
 
+    &__tableCart {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 10px;
 
+      &__head {
+        background-color: #f0f0f0;
+        height: 60px;
+      }
+
+    }
 
     &__text {
       font-size: 18px;
@@ -19,5 +30,32 @@
       color: #000;
     }
 
+    &__tableCart {
+
+      &__row {
+
+      }
+
+      &__cell {
+        height: auto;
+        text-align: center;
+
+        &__delete {
+          color: indigo;
+          text-decoration: dotted;
+        }
+      }
+      &__cell:nth-child(4) {
+        width: 100px;
+      }
+
+      &__cell img {
+        width: 120px;
+        height: 150px;
+      }
+    }
+
   }
+
+
 }

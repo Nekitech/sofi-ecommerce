@@ -5,7 +5,7 @@ import Counter from "./counterCard";
 import {switchImgs} from "./switchImgs";
 import BurgerMenu from "./burgerMenu";
 import DropDown from "./dropDown";
-import {handlerAddProductInCart} from "./backend/addProductInCart";
+import {deleteProductInCart, handlerAddProductInCart, renderCart} from "./backend/productInCart";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -51,11 +51,28 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
+// Происходит рендер компонента "Счетчик" через JS, поэтому используем промис, чтобы убедиться, что компонент отрендерился
+// и только потом инициализируем счетчики
+new Promise((resolve, reject) => {
+    const table_body = document.querySelector('.cart__content__tableCart__body');
+    if (table_body) {
+        renderCart(table_body)
+        deleteProductInCart(table_body)
+    }
+    resolve();
+}).then(() => {
+    const table_body = document.querySelector('.cart__content__tableCart__body');
+    if (!table_body) {
+        const counters = document.querySelectorAll('.counter__input');
+        counters.forEach(counter => {
+            new Counter(counter, counter.previousElementSibling, counter.nextElementSibling, 0, 1);
+        })
+    }
 
-const counters = document.querySelectorAll('.counter__input');
-counters.forEach(counter => {
-    new Counter(counter, counter.previousElementSibling, counter.nextElementSibling, 0, 1);
+}).catch((err) => {
+    console.log('error:', err);
 })
+
 
 switchImgs('.card', {hover: true, click: false});
 switchImgs('.productPage__imgs', {hover: false, click: true});
@@ -73,7 +90,7 @@ if (burger) {
 //dropDown
 const dropdownList = document.querySelectorAll('.dropDown');
 
-if(dropdownList) {
+if (dropdownList) {
     dropdownList.forEach(dropdown => {
         new DropDown(dropdown).init();
     })
@@ -82,3 +99,6 @@ if(dropdownList) {
 //handlerAddProductInCart();
 
 handlerAddProductInCart()
+
+// deleteProductInCart(document.querySelector('.cart__content__tableCart__body'));
+
