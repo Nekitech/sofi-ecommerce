@@ -10,14 +10,12 @@ export default class Counter {
     }
 
     init() {
-
         this.decrBtn.addEventListener('click', this.decr);
         this.incrBtn.addEventListener('click', this.incr);
     }
 
     decr = () => {
         const value = this.input.value.replace(' м', '');
-
 
         if (parseFloat(value) <= this.min) {
             this.input.value = this.min + ' м';

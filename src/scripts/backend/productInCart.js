@@ -99,9 +99,8 @@ export const deleteProductInCart = (table_cart) => {
             const nameProduct = row.querySelector('.cart__content__tableCart__cell:nth-child(2)').textContent;
             const imgProduct = row.querySelector('.cart__content__tableCart__cell img').getAttribute('src');
             const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
-            const product = list_products.find((product) => product.name === nameProduct && product.mainImg === imgProduct);
-            list_products.splice(list_products.indexOf(product), 1);
-            localStorage.setItem('basketData', JSON.stringify(list_products));
+            const newCart = list_products.filter((product) => product.name !== nameProduct && product.mainImg !== imgProduct);
+            localStorage.setItem('basketData', JSON.stringify(newCart));
             row.remove();
         }
     })
