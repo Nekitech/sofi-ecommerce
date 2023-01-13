@@ -82,9 +82,11 @@ export const renderCart = (table_cart) => {
 
         counterDecr.addEventListener('click', () => {
             hashProductProperties();
+            renderProductsInfo()
         })
         counterIncr.addEventListener('click', () => {
             hashProductProperties();
+            renderProductsInfo()
         })
 
 
@@ -98,10 +100,34 @@ export const deleteProductInCart = (table_cart) => {
             const row = e.target.closest('.cart__content__tableCart__row');
             const nameProduct = row.querySelector('.cart__content__tableCart__cell:nth-child(2)').textContent;
             const imgProduct = row.querySelector('.cart__content__tableCart__cell img').getAttribute('src');
+
             const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
             const newCart = list_products.filter((product) => product.name !== nameProduct && product.mainImg !== imgProduct);
             localStorage.setItem('basketData', JSON.stringify(newCart));
             row.remove();
+            checkEmptyCart(table_cart);
+            renderProductsInfo();
         }
     })
+}
+
+export const checkEmptyCart = (table_cart) => {
+    const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
+    if (list_products.length === 0) {
+        table_cart.innerHTML = `<tr class="cart__content__tableCart__row">
+                                    <td class="cart__content__tableCart__cell" colspan="5">Ваша корзина пуста</td>
+                                </tr>`;
+    }
+}
+
+export const renderProductsInfo = () => {
+    const cart = document.querySelector('.cart');
+    if(!cart) return;
+    const amountProducts = cart.querySelector('.cart__content__cartInfo__numberProducts__value');
+    const totalPrice = cart.querySelector('.cart__content__cartInfo__totalPrice__value');
+    const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
+
+    amountProducts.textContent = list_products.length;
+    totalPrice.textContent = list_products.reduce((acc, product) => acc + product.total, 0) + ' руб.';
+
 }

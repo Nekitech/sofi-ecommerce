@@ -5,7 +5,13 @@ import Counter from "./counterCard";
 import {switchImgs} from "./switchImgs";
 import BurgerMenu from "./burgerMenu";
 import DropDown from "./dropDown";
-import {deleteProductInCart, handlerAddProductInCart, renderCart} from "./backend/productInCart";
+import {
+    checkEmptyCart,
+    deleteProductInCart,
+    handlerAddProductInCart,
+    renderCart,
+    renderProductsInfo
+} from "./backend/productInCart";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -58,6 +64,7 @@ new Promise((resolve, reject) => {
     if (table_body) {
         renderCart(table_body)
         deleteProductInCart(table_body)
+        checkEmptyCart(table_body)
     }
     resolve();
 }).then(() => {
@@ -96,9 +103,16 @@ if (dropdownList) {
     })
 }
 
+
+// cart
+
+
 //handlerAddProductInCart();
 
 handlerAddProductInCart()
 
+renderProductsInfo()
+
 // deleteProductInCart(document.querySelector('.cart__content__tableCart__body'));
+
 

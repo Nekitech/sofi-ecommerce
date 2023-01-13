@@ -1,14 +1,24 @@
 .cart {
   width: 100%;
+  height: 80vh;
 
   &__wrapper {
     margin: 50px 0 0 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
   }
 
 
   &__content {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-gap: 0 20px;
+
+    &__text {
+      margin-bottom: 40px;
+    }
 
     &__tableCart {
       display: table;
@@ -20,6 +30,7 @@
         background-color: #f0f0f0;
         height: 60px;
       }
+
 
     }
 
@@ -42,9 +53,11 @@
 
         &__delete {
           color: indigo;
-          text-decoration: dotted;
+          border-bottom: 2px dashed indigo;
+          cursor: pointer;
         }
       }
+
       &__cell:nth-child(4) {
         width: 100px;
       }
@@ -52,6 +65,35 @@
       &__cell img {
         width: 120px;
         height: 150px;
+      }
+    }
+
+
+    &__cartInfo {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+      width: 400px;
+      height: 300px;
+      background: rgba(187, 157, 96, .1);
+
+      &__btn {
+        margin-top: 40px;
+        padding: 10px 20px;
+        background-color: #8b008b;
+        border: 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.3s all;
+        cursor: pointer;
+
+        &:hover {
+          transition: 0.3s all;
+          opacity: 80%;
+        }
       }
     }
 
