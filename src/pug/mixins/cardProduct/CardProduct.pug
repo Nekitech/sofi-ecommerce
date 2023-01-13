@@ -1,18 +1,18 @@
 mixin CardProduct(data)
-    .card
+    .card(data-product)
         .card__blockImg
             .card__blockImg__switchesImgs
                 img.card__blockImg__switchesImgs__img.smallImg(src=data.img1 alt='product')
                 img.card__blockImg__switchesImgs__img.smallImg(src=data.img2 alt='product')
                 img.card__blockImg__switchesImgs__img.smallImg(src=data.img3 alt='product')
                 .card__blockImg__switchesImgs__mainImg.mainImg
-                    img(src=data.mainImg alt='product')
+                    img(src=data.mainImg alt='product' data-mainImg)
                     a(href=data.link)
         .card__blockInfo
-            h3.card__blockInfo__title
+            h3.card__blockInfo__title(data-name)
                 | #{data.title}
             .card__blockInfo__price
-                p.card__blockInfo__price__new
+                p.card__blockInfo__price__new(data-price)
                     | #{data.priceNew}
                 p.card__blockInfo__price__prev
                     | #{data.pricePrev}

@@ -16,21 +16,20 @@ const hashProductInCart = (productData) => {
 export const handlerAddProductInCart = () => {
     window.addEventListener('click', (e) => {
         if (e.target.hasAttribute('data-cart')) {
-            const card = e.target.closest('.card');
+            const card = e.target.closest('[data-product]');
             const productData = {
-                mainImg: card.querySelector('.card__blockImg__switchesImgs__mainImg.mainImg img')
-                    .getAttribute('src'),
-                name: card.querySelector('.card__blockInfo__title').textContent,
-                price: parseInt(card.querySelector('.card__blockInfo__price__new').textContent),
-                length: parseFloat(card.querySelector('.counter__input').value
-                    .replace(' м', '')),
-                total: parseInt(card.querySelector('.card__blockInfo__price__new').textContent)
-                    * parseFloat(card.querySelector('.counter__input').value) * 10
+                mainImg: card.querySelector('[data-mainImg]').getAttribute('src'),
+                name: card.querySelector('[data-name]').textContent,
+                price: parseInt(card.querySelector('[data-price]').textContent),
+                length: parseFloat(card.querySelector('[data-counter] input').value
+                    .replace(/[^\.\d]/g, '')),
+                total: parseInt(card.querySelector('[data-price]').textContent)
+                    * parseFloat(card.querySelector('[data-counter] input').value) * 10
 
             }
             hashProductInCart(productData);
             popupAddCart({img: productData.mainImg, name: productData.name});
-
+            renderProductsInfoInHeader();
         }
 
     })
@@ -83,10 +82,12 @@ export const renderCart = (table_cart) => {
         counterDecr.addEventListener('click', () => {
             hashProductProperties();
             renderProductsInfo()
+            renderProductsInfoInHeader()
         })
         counterIncr.addEventListener('click', () => {
             hashProductProperties();
             renderProductsInfo()
+            renderProductsInfoInHeader()
         })
 
 
@@ -107,6 +108,7 @@ export const deleteProductInCart = (table_cart) => {
             row.remove();
             checkEmptyCart(table_cart);
             renderProductsInfo();
+            renderProductsInfoInHeader()
         }
     })
 }
@@ -122,7 +124,7 @@ export const checkEmptyCart = (table_cart) => {
 
 export const renderProductsInfo = () => {
     const cart = document.querySelector('.cart');
-    if(!cart) return;
+    if (!cart) return;
     const amountProducts = cart.querySelector('.cart__content__cartInfo__numberProducts__value');
     const totalPrice = cart.querySelector('.cart__content__cartInfo__totalPrice__value');
     const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
@@ -130,4 +132,12 @@ export const renderProductsInfo = () => {
     amountProducts.textContent = list_products.length;
     totalPrice.textContent = list_products.reduce((acc, product) => acc + product.total, 0) + ' руб.';
 
+}
+
+export const renderProductsInfoInHeader = () => {
+    const header = document.querySelector('.header');
+    const totalPrice = header.querySelector('.header__userBlock__cartPrice');
+    const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
+
+    totalPrice.textContent = list_products.reduce((acc, product) => acc + product.total, 0) + ' руб.';
 }

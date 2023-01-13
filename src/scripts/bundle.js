@@ -10,7 +10,7 @@ import {
     deleteProductInCart,
     handlerAddProductInCart,
     renderCart,
-    renderProductsInfo
+    renderProductsInfo, renderProductsInfoInHeader
 } from "./backend/productInCart";
 
 const hideMenu = document.querySelector('.hide-list');
@@ -112,6 +112,7 @@ if (dropdownList) {
 handlerAddProductInCart()
 
 renderProductsInfo()
+renderProductsInfoInHeader()
 
 // deleteProductInCart(document.querySelector('.cart__content__tableCart__body'));
 
