@@ -17,28 +17,32 @@ export default class Counter {
     decr = () => {
         const value = this.input.value.replace(' м', '');
 
-        if (parseFloat(value) <= this.min) {
+        if (parseFloat(value) <= this.min + 0.1) {
             this.input.value = this.min + ' м';
             this.input.setAttribute('value', this.min + ' м');
+            this.setTotalPrice(this.productData.price)
+            return
         } else {
             this.input.value = (value - 0.1).toFixed(1) + ' м';
             this.input.setAttribute('value', (value - 0.1).toFixed(1) + ' м');
+            this.setTotalPrice(this.productData.price)
         }
-        this.setTotalPrice(this.productData.price)
 
     }
 
     incr = () => {
         const value = this.input.value.replace(' м', '');
 
-        if (parseFloat(value) >= this.max) {
+        if (parseFloat(value) >= this.max - 0.1) {
             this.input.value = this.max + ' м';
             this.input.setAttribute('value', this.max + ' м');
+            this.setTotalPrice(this.productData.price)
+            return
         } else {
             this.input.value = (+value + 0.1).toFixed(1) + ' м';
             this.input.setAttribute('value', (+value + 0.1).toFixed(1) + ' м');
+            this.setTotalPrice(this.productData.price)
         }
-        this.setTotalPrice(this.productData.price)
     }
 
     setTotalPrice = (price) => {

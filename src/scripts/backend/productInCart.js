@@ -67,7 +67,7 @@ export const renderCart = (table_cart) => {
         const counterDecr = row.querySelector('.counter__btn--decr')
         const counterIncr = row.querySelector('.counter__btn--incr')
 
-        new Counter(counter, counterDecr, counterIncr, 0, 1, {
+        new Counter(counter, counterDecr, counterIncr, 0, 2, {
             totalElem: cells[4],
             price: product.price,
         }).init();
