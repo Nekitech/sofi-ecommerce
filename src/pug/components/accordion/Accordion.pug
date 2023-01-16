@@ -10,7 +10,8 @@
                 .accordion__item__content
                     p.accordion__item__body__text
                         | Город доставки
-                    input(placeholder='Введите название', type='text')
+                    .accordion__item__input
+                        input( placeholder='Введите название', type='text').accordion__item__input
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns--first
                         button.accordion__item__body__footer__btns__next
@@ -22,7 +23,28 @@
                 h1.accordion__item__header__title
                     | Доставка
             .accordion__item__body
-                | sdfnsfnsdjfsdjflsdjf
+                .accordion__item__deliveryBlock
+                    .accordion__item__deliveryWays
+                        .accordion__item__deliveryWays__way
+                            .accordion__item__deliveryWays__way__block
+                                input(type='checkbox', name='deliveryWay', id='deliveryWay1')
+                                img(src='img/deliveryWay1.jpg', alt='deliveryWay1')
+                            h4.accordion__item__deliveryWays__way__title
+                                | Самовывоз
+                        .accordion__item__deliveryWays__way
+                            .accordion__item__deliveryWays__way__block
+                                input(type='checkbox', name='deliveryWay', id='deliveryWay2')
+                                img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
+                            h4.accordion__item__deliveryWays__way__title
+                                | Доставка курьером
+                        .accordion__item__deliveryWays__way
+                            .accordion__item__deliveryWays__way__block
+                                input(type='checkbox', name='deliveryWay', id='deliveryWay3')
+                                img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
+                            h4.accordion__item__deliveryWays__way__title
+                                | Доставка почтой России
+                    .accordion__item__deliveryWays__promocode
+                        input( placeholder='Введите промокод', type='text').accordion__item__deliveryWays__promocode__input
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns
                         button.accordion__item__body__footer__btns__prev
@@ -36,7 +58,28 @@
                 h1.accordion__item__header__title
                     | Оплата
             .accordion__item__body
-                | sdfnsfnsdjfsdjflsdjf
+                .accordion__item__paymentBlock
+                    .accordion__item__paymentWays
+                        .accordion__item__paymentWays__way
+                            .accordion__item__paymentWays__way__block
+                                input(type='checkbox', name='paymentWay', id='paymentWay1')
+                                img(src='img/paymentWay1.png', alt='paymentWay1')
+                            h4.accordion__item__paymentWays__way__title
+                                | Онлайн - оплата на сайте
+                        .accordion__item__paymentWays__way
+                            .accordion__item__paymentWays__way__block
+                                input(type='checkbox', name='paymentWay', id='paymentWay2')
+                                img(src='img/paymentWay2.jpg', alt='paymentWay2')
+                            h4.accordion__item__paymentWays__way__title
+                                | Оплата на карту Сбербанка
+                        .accordion__item__paymentWays__way
+                            .accordion__item__paymentWays__way__block
+                                input(type='checkbox', name='paymentWay', id='paymentWay3')
+                                img(src='img/paymentWay3.jpg', alt='paymentWay3')
+                            h4.accordion__item__paymentWays__way__title
+                                | Доставка почтой России
+                    .accordion__item__paymentWays__promocode
+                        input( placeholder='Введите промокод', type='text').accordion__item__paymentWays__promocode__input
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns
                         button.accordion__item__body__footer__btns__prev
@@ -50,7 +93,24 @@
                 h1.accordion__item__header__title
                     | Покупатель
             .accordion__item__body
-                | sdfnsfnsdjfsdjflsdjf
+                form.accordion__item__form
+                    label.accordion__item__form__label
+                        | Ф.И.О
+                        input( placeholder='Введите имя', type='text').accordion__item__form__input
+                    label.accordion__item__form__label
+                        | Email
+                        input( placeholder='Введите Email', type='text').accordion__item__form__input
+                    label.accordion__item__form__label
+                        | Телефон
+                        input( placeholder='Введите телефон', type='tel').accordion__item__form__input
+
+                    label.accordion__item__form__label
+                        | Адрес доставки
+                        textarea( placeholder='Введите адрес доставки', type='text').accordion__item__form__address
+                    label.accordion__item__form__label
+                        | Комментарии к заказу
+                        textarea( placeholder='Оставьте свой комментарий', type='text').accordion__item__form__comment
+
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns
                         button.accordion__item__body__footer__btns__prev
@@ -64,7 +124,20 @@
                 h1.accordion__item__header__title
                     | Товары в заказе
             .accordion__item__body
-                | sdfnsfnsdjfsdjflsdjf
+                .accordion__item__order
+                    .accordion__item__order__item
+                        .accordion__item__order__item__img
+                            img(src='img/product1.jpg', alt='product1')
+                        .accordion__item__order__item__info
+                            h4.accordion__item__order__item__info__title
+
+                            .accordion__item__order__item__info__length
+
+                            .accordion__item__order__item__info__price
+
+
+
+                    .accordion__item__order
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns--last
                         button.accordion__item__body__footer__btns__prev

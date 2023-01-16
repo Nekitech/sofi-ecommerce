@@ -2448,6 +2448,56 @@ body.activeBurger {
   flex-direction: column;
 }
 
+.accordion__item__input {
+  width: 100%;
+  height: 60px;
+  color: #555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 10px 10px 10px 40px;
+  position: relative;
+}
+
+.accordion__item__input:before {
+  content: "";
+  background: url("../img/filter-search.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+}
+
+.accordion__item__deliveryBlock,
+.accordion__item__paymentBlock {
+  width: 100%;
+  padding: 10px;
+}
+
+.accordion__item__deliveryWays,
+.accordion__item__paymentWays {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px 20px;
+}
+
+.accordion__item__deliveryWays__way__block,
+.accordion__item__paymentWays__way__block {
+  width: 140px;
+  height: 70px;
+  border: 1px solid #91cedc;
+}
+
+.accordion__item__deliveryWays__way__block img,
+.accordion__item__paymentWays__way__block img {
+  width: 56px;
+  height: 56px;
+}
+
 .accordion__item__header {
   width: 100%;
   height: auto;
@@ -2543,9 +2593,54 @@ body.activeBurger {
   justify-content: flex-start;
 }
 
+.accordion__item__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px 0;
+  padding: 20px;
+}
+
+.accordion__item__form__label input {
+  width: 100%;
+  height: 30px;
+  color: #555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 5px;
+  position: relative;
+}
+
+.accordion__item__form__label textarea {
+  padding: 10px;
+}
+
+.accordion__item__form__address {
+  height: 90px;
+}
+
+.accordion__item__form__comment {
+  height: 40px;
+}
+
+.accordion__item__form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .accordion__item__header.activeItemAccordion ~ .accordion__item__body {
   height: auto;
-  min-height: 500px;
+  min-height: 200px;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
@@ -2775,6 +2870,10 @@ body.activeBurger {
 
   .header__menu__link.activeHideList:after {
     background: url("../img/arrowWhite.svg") no-repeat;
+  }
+
+  .accordion__item__input:before {
+    background: url("../img/filter-search.svg") no-repeat;
   }
 }
 
