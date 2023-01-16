@@ -13,6 +13,7 @@ import {
     renderProductsInfo, renderProductsInfoInHeader
 } from "./backend/productInCart";
 import {Accordion} from "./accordion";
+import {renderOrder} from "./backend/order";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -121,4 +122,6 @@ renderProductsInfoInHeader()
 //accordion
 
 new Accordion(document.querySelector('.accordion.orderMake__accordion')).init();
+
+renderOrder(document.querySelector('.accordion__item__order'));
 
