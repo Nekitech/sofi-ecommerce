@@ -47,6 +47,6 @@ export default class Counter {
 
     setTotalPrice = (price) => {
         if (!this.productData.totalElem) return
-        this.productData.totalElem.textContent = price * 10 * parseFloat(this.input.value.replace(' м', '')) + ' руб. за ввыбранную длину';
+        this.productData.totalElem.textContent = (price * 10 * parseFloat(this.input.value.replace(' м', ''))).toFixed(0) + ' руб. за ввыбранную длину';
     }
 }

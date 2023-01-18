@@ -58,7 +58,7 @@ export const renderCart = (table_cart) => {
                                         <input class="counter__input" type="text" value="${product.length} м" readonly>
                                         <button class="counter__btn counter__btn--incr">+</button>
                                     </div>`;
-        cells[4].textContent = product.total + ' руб. за ввыбранную длину';
+        cells[4].textContent = product.total + ' руб. за выбранную длину';
 
         table_cart.append(row);
 

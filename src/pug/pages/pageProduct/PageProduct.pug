@@ -48,16 +48,14 @@ block page
                             .productPage__choice
                                 .productPage__choice__wrapper
                                     .productPage__choice__prices
-                                        .productPage__choice__prices__currPrice
-                                            | 261 руб/м
+                                        .productPage__choice__prices__currPrice(data-price)
+                                            | Текущая цена: 261 руб/м
                                         .productPage__choice__prices__prevPrice
-                                            | 290 руб.
+                                            | Предыдущая цена: 290 руб.
                                     p.productPage__choice__text
                                         | Выберите длину
                                     .productPage__choice__counter
                                         include ../../components/counterCard/CounterCard
-                                    p.productPage__choice__price(data-price)
-                                        | 44 руб.
                                     .productPage__choice__btns
                                         button.productPage__choice__btns__btn(data-cart)
                                             a(href='#' data-cart)
