@@ -3,5 +3,17 @@ block page
     include ../../chunk/header/header
     section.orderMake
         .container
-            include ../../components/accordion/Accordion
+            .orderMake__wrapper
+                include ../../components/accordion/Accordion
+                .orderMake__info
+                    .orderMake__info__totalProducts
+                        p.orderMake__info__totalProducts__name
+                            | Товаров на
+                        p.orderMake__info__totalProducts__value
+                            | 0
+                    .orderMake__info__totalSum
+                        p.orderMake__info__totalSum__name
+                            | Итого
+                        p.orderMake__info__totalSum__value
+                            | 0
     include ../../chunk/footer/footer

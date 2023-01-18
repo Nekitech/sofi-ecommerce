@@ -120,8 +120,34 @@ renderProductsInfoInHeader()
 
 
 //accordion
+const accordion = document.querySelector('.accordion.orderMake__accordion');
+if(accordion){
 
-new Accordion(document.querySelector('.accordion.orderMake__accordion')).init();
+    new Accordion(document.querySelector('.accordion.orderMake__accordion')).init();
 
-renderOrder(document.querySelector('.accordion__item__order'));
+    renderOrder(document.querySelector('.accordion__item__order'));
+}
+
+
+// Yandex map
+
+let center = [52.72132717013808,41.45317712898239];
+
+function init() {
+    let map = new ymaps.Map('map', {
+        center: center,
+        zoom: 17
+    });
+
+    // map.controls.remove('geolocationControl'); // удаляем геолокацию
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+}
+
+ymaps.ready(init);
 

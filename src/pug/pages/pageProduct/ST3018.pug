@@ -4,7 +4,7 @@ block page
     main.productPage
         section.breadcrumbs
 
-        section.productPage__product
+        section.productPage__product(data-product)
             .container
                 .productPage__wrapper
                     .productPage__imgs
@@ -12,10 +12,10 @@ block page
                         img.productPage__imgs__smallImg.smallImg(src='img/ST3018.webp')
                         img.productPage__imgs__smallImg.smallImg(src='img/ST3018.webp')
                         .productPage__imgs__mainImg.mainImg
-                            img(src='img/ST3018.webp')
+                            img(src='img/ST3018.webp' data-mainImg)
                     .productPage__info
-                        h3.productPage__title
-                            | Саржа цв.Темный зелено-серый, ш.1.53м, хлопок-100%, 235гр/м.кв
+                        h3.productPage__title(data-name)
+                            | Гладкий сатин
                         .productPage__discount
                             | СКИДКА 10%
                         .productPage__data
@@ -48,7 +48,7 @@ block page
                             .productPage__choice
                                 .productPage__choice__wrapper
                                     .productPage__choice__prices
-                                        .productPage__choice__prices__currPrice
+                                        .productPage__choice__prices__currPrice(data-price)
                                             | 261 руб/м
                                         .productPage__choice__prices__prevPrice
                                             | 290 руб.
@@ -59,8 +59,8 @@ block page
                                     p.productPage__choice__price
                                         | 44 руб.
                                     .productPage__choice__btns
-                                        button.productPage__choice__btns__btn
-                                            a(href='#')
+                                        button.productPage__choice__btns__btn(data-cart)
+                                            a(href='#' data-cart)
                                                 | В корзину
 
                         p.productPage__description
@@ -98,7 +98,7 @@ block page
                             img2: 'img/ST3027.webp',
                             img3: 'img/ST3025.webp',
                             mainImg: 'img/ST3025.webp',
-                            title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                            title: 'Гладкий сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -109,7 +109,7 @@ block page
                             img2: 'img/ST-2001.webp',
                             img3: 'img/ST-2001.webp',
                             mainImg: 'img/ST-2004.webp',
-                            title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                            title: 'Полосатый сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -120,7 +120,7 @@ block page
                             img2: 'img/ST3003.webp',
                             img3: 'img/ST3004.webp',
                             mainImg: 'img/ST3002.webp',
-                            title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                            title: 'Гладкий сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -175,7 +175,7 @@ block page
                             img2: 'img/ST3026.webp',
                             img3: 'img/ST3026.webp',
                             mainImg: 'img/ST3026.webp',
-                            title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                            title: 'Гладкий сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -186,7 +186,7 @@ block page
                             img2: 'img/ST-2022.webp',
                             img3: 'img/ST-2023.webp',
                             mainImg: 'img/ST-2020.webp',
-                            title: 'Гладкий сатин',
+                            title: 'Полосатый сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -197,7 +197,7 @@ block page
                             img2: 'img/ST-2026.webp',
                             img3: 'img/ST-2027.webp',
                             mainImg: 'img/ST-2024.webp',
-                            title: 'Гладкий сатин',
+                            title: 'Полосатый сатин',
                             priceNew: '1000 руб.',
                             pricePrev: '2000 руб.'
                         })
@@ -216,7 +216,7 @@ block page
                                     img2: 'img/ST3003.webp',
                                     img3: 'img/ST3004.webp',
                                     mainImg: 'img/ST3002.webp',
-                                    title: 'Ткань палаточная с водоотталкивающей пропиткой цв.Суровый, ш.1.55м, хл-100%, 235гр/м.кв',
+                                    title: 'Гладкий сатин',
                                     priceNew: '1000 руб.',
                                     pricePrev: '2000 руб.'
                                 })
@@ -281,5 +281,6 @@ block page
                         button.glide__arrow.productsSlider__slider__arrow.glide__arrow--right.productsSlider__slider__arrow-right(data-glide-dir='>')
                             img.glide__arrow__img.productsSlider__slider__arrow__img(src='img/arrowWhite.svg')
     include ../../components/formFeedback/FormFeedback
+    include ../../templates/popup/popup
     include ../../chunk/footer/footer
 

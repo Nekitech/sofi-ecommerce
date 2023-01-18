@@ -1,6 +1,8 @@
 .accordion {
   width: 100%;
   min-height: 100vh;
+  max-width: 845px;
+
 
   &__wrapper {
     display: flex;
@@ -158,6 +160,10 @@
 
         textarea {
           padding: 10px;
+          max-width: 100%;
+          min-width: 100%;
+          max-height: 400px;
+          min-height: 100px;
         }
       }
 

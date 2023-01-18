@@ -50,6 +50,9 @@ button {
   cursor: pointer;
   outline: none;
 }
+main {
+  min-height: 100vh;
+}
 
 .titleSection {
   font-size: 32px;

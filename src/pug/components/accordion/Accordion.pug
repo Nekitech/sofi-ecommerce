@@ -27,19 +27,19 @@
                     .accordion__item__deliveryWays
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='checkbox', name='deliveryWay', id='deliveryWay1')
+                                input(type='radio', name='deliveryWay', id='deliveryWay1')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay1')
                             h4.accordion__item__deliveryWays__way__title
                                 | Самовывоз
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='checkbox', name='deliveryWay', id='deliveryWay2')
+                                input(type='radio', name='deliveryWay', id='deliveryWay2')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
                             h4.accordion__item__deliveryWays__way__title
                                 | Доставка курьером
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='checkbox', name='deliveryWay', id='deliveryWay3')
+                                input(type='radio', name='deliveryWay', id='deliveryWay3')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
                             h4.accordion__item__deliveryWays__way__title
                                 | Доставка почтой России
@@ -62,19 +62,19 @@
                     .accordion__item__paymentWays
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='checkbox', name='paymentWay', id='paymentWay1')
+                                input(type='radio', name='paymentWay', id='paymentWay1')
                                 img(src='img/paymentWay1.png', alt='paymentWay1')
                             h4.accordion__item__paymentWays__way__title
                                 | Онлайн - оплата на сайте
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='checkbox', name='paymentWay', id='paymentWay2')
+                                input(type='radio', name='paymentWay', id='paymentWay2')
                                 img(src='img/paymentWay2.jpg', alt='paymentWay2')
                             h4.accordion__item__paymentWays__way__title
                                 | Оплата на карту Сбербанка
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='checkbox', name='paymentWay', id='paymentWay3')
+                                input(type='radio', name='paymentWay', id='paymentWay3')
                                 img(src='img/paymentWay3.jpg', alt='paymentWay3')
                             h4.accordion__item__paymentWays__way__title
                                 | Доставка почтой России
@@ -125,16 +125,7 @@
                     | Товары в заказе
             .accordion__item__body
                 .accordion__item__order
-                    .accordion__item__order__item
-                        .accordion__item__order__item__img
-                        .accordion__item__order__item__info
-                            h4.accordion__item__order__item__info__title
-
-                            .accordion__item__order__item__info__length
-
-                            .accordion__item__order__item__info__price
-
-
+                    // рендер компонентов корзины
 
                     .accordion__item__order
                 .accordion__item__body__footer

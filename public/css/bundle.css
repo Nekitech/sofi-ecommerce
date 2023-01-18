@@ -57,6 +57,10 @@ button {
   outline: none;
 }
 
+main {
+  min-height: 100vh;
+}
+
 .titleSection {
   font-size: 32px;
   font-weight: 300;
@@ -2293,6 +2297,16 @@ body.activeBurger {
   width: 100%;
 }
 
+.map {
+  width: 100%;
+  height: 500px;
+  background-color: #333;
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
+}
+
 .contactsPage {
   width: 100%;
 }
@@ -2423,6 +2437,7 @@ body.activeBurger {
 .accordion {
   width: 100%;
   min-height: 100vh;
+  max-width: 845px;
 }
 
 .accordion__wrapper {
@@ -2618,6 +2633,10 @@ body.activeBurger {
 
 .accordion__item__form__label textarea {
   padding: 10px;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 400px;
+  min-height: 100px;
 }
 
 .accordion__item__form__address {
@@ -2685,6 +2704,32 @@ body.activeBurger {
 
 .accordion__item.passedItem {
   border: 2px solid #356511;
+}
+
+.orderMake__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.orderMake__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px 0;
+  width: 265px;
+  height: 265px;
+  border: 1px solid #000;
+  padding: 10px;
 }
 
 .glide {

@@ -20,7 +20,6 @@ export class Accordion {
     }
 
     toggle(event) {
-        event.preventDefault();
         let target = event.target;
         let headerItem = target?.closest('.accordion__item__header');
         const item = target?.closest('.accordion__item');

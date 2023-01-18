@@ -1,1 +1,26 @@
 @import '../../components/accordion/Accordion.scss';
+
+
+.orderMake {
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    width: 265px;
+    height: 265px;
+    border: 1px solid #000;
+
+    padding: 10px;
+
+
+  }
+}
+
