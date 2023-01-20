@@ -2293,6 +2293,24 @@ body.activeBurger {
   justify-content: space-between;
 }
 
+.productPage__features__wrapper__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.productPage__features__wrapper__item__text {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .productPage__list {
   width: 100%;
 }

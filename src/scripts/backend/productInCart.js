@@ -22,7 +22,7 @@ export const handlerAddProductInCart = () => {
                 name: card.querySelector('[data-name]').textContent,
                 price: parseInt(card.querySelector('[data-price]').textContent),
                 length: parseFloat(card.querySelector('[data-counter] input').value
-                    .replace(/[^\.\d]/g, '')),
+                    .replace(/[^.\d]/g, '')),
                 total: parseInt(card.querySelector('[data-price]').textContent)
                     * parseFloat(card.querySelector('[data-counter] input').value) * 10
 
@@ -139,5 +139,13 @@ export const renderProductsInfoInHeader = () => {
     const totalPrice = header.querySelector('.header__userBlock__cartPrice');
     const list_products = JSON.parse(localStorage.getItem('basketData')) || [];
 
+    const positionsElem = header.querySelector('.header__userBlock__positions');
+    const textCountProducts = (count) => (count === 1)
+        ? count + ' позиция'
+        : (count > 1 && count < 5)
+            ? count + ' позиции'
+            : count + ' позиций';
+    positionsElem.textContent = textCountProducts(list_products.length);
+    console.log(positionsElem.textContent)
     totalPrice.textContent = list_products.reduce((acc, product) => acc + product.total, 0) + ' руб.';
 }
