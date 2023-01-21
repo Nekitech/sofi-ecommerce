@@ -385,6 +385,27 @@ body.activeBurger {
   display: none;
 }
 
+.header__topLine__cartLogo {
+  display: none;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.header__topLine__cartLogo img {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .header__topLine__navLink {
   text-decoration: none;
   color: #000;
@@ -3032,6 +3053,10 @@ body.activeBurger {
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
     transform: scale(0.6);
+  }
+
+  .header__topLine__cartLogo {
+    display: block;
   }
 
   .header__main {
