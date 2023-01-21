@@ -18,6 +18,17 @@
     display: flex;
     justify-content: flex-start;
   }
+  &__item {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 0 5px;
+    color: #000;
+    cursor: pointer;
+  }
 }
 .hide-list.activeHideMenu {
   visibility: visible;

@@ -2,13 +2,15 @@ export const popupAddCart = ({img, name}) => {
     const popupElem = document.querySelector('[data-popup-add-cart]');
 
     console.log(popupElem);
-    const popupImg = popupElem.querySelector('.popup__content__info__img img');
+    const popupImg = popupElem.querySelector('.popup__content__info__img');
     const popupName = popupElem.querySelector('.popup__content__info__name');
     const popupBtn = popupElem.querySelectorAll('.popup__content__btns button');
+    popupImg.innerHTML = '';
+    const imgElem = document.createElement('img');
+    imgElem.src = img;
 
-    console.log(popupElem, popupImg, popupName, popupBtn);
+    popupImg.append(imgElem);
 
-    popupImg?.setAttribute('src',  img);
     popupName.textContent = name;
     popupElem?.classList.add('activePopup');
 

@@ -4,7 +4,7 @@ block page
     main.productPage
         section.breadcrumbs
 
-        section.productPage__product
+        section.productPage__product(data-product)
             .container
                 .productPage__wrapper
                     .productPage__imgs
@@ -12,9 +12,9 @@ block page
                         img.productPage__imgs__smallImg.smallImg(src='img/ST-2024.webp')
                         img.productPage__imgs__smallImg.smallImg(src='img/ST-2024.webp')
                         .productPage__imgs__mainImg.mainImg
-                            img(src='img/ST-2024.webp')
+                            img(src='img/ST-2024.webp' data-mainImg)
                     .productPage__info
-                        h3.productPage__title
+                        h3.productPage__title(data-name)
                             | Полосатый сатин
                         .productPage__discount
                             | СКИДКА 10%
@@ -59,7 +59,7 @@ block page
 
                                     .productPage__choice__btns
                                         button.productPage__choice__btns__btn
-                                            a(href='#')
+                                            a(href='#' data-cart)
                                                 | В корзину
 
                         p.productPage__description

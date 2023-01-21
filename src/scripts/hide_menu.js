@@ -3,7 +3,6 @@ import {handlerOutEl} from "./handlerOutEl";
 const closeMenu = (menu) => {
     menu.classList.remove('activeHideMenu');
     menu.querySelector('.hide-list__wrapper').innerHTML = '';
-
 }
 
 export const hideMenuHandler = (hideMenu, data) => {
@@ -22,7 +21,6 @@ export const hideMenuHandler = (hideMenu, data) => {
             const textItem = e.target.textContent;
 
             if (data[textItem]) {
-                console.log(data[textItem])
                 for (let type in data[textItem]) {
                     const ul = document.createElement('ul');
                     const title = document.createElement('h3');
@@ -40,11 +38,8 @@ export const hideMenuHandler = (hideMenu, data) => {
 
                 }
                 hideMenu.classList.add('activeHideMenu');
-
             }
-
         })
-
     })
     handlerOutEl(() => {
         closeMenu(hideMenu)
