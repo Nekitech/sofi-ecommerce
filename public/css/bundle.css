@@ -238,7 +238,6 @@ main {
   transition: 0.5s all;
   overflow-y: scroll;
   padding-bottom: 100px;
-  height: 100vh;
 }
 
 .burgerMenu__number {
@@ -363,7 +362,7 @@ main {
   transition: 0.5s all;
 }
 
-body.activeBurger {
+html.activeBurger {
   overflow-y: hidden;
 }
 

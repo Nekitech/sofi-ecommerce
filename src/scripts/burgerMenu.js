@@ -2,7 +2,7 @@ export default class BurgerMenu {
     constructor(menu, btn) {
         this.menu = menu;
         this.btn = btn;
-        this.body = document.querySelector('body');
+        this.body = document.querySelector('html');
         this.init();
     }
 
