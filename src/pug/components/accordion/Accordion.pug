@@ -1,25 +1,41 @@
 .accordion.orderMake__accordion
-    .accordion__wrapper
+    form(id='form-data' enctype="multipart/form-data" method="post" name="form").accordion__wrapper
         .accordion__item
             .accordion__item__header.activeItemAccordion
                 .accordion__item__header__number
                     | 1
+                h1.accordion__item__header__title
+                    | Товары в заказе
+            .accordion__item__body
+                .accordion__item__order
+
+                    .accordion__item__order
+                .accordion__item__body__footer
+                    .accordion__item__body__footer__btns--last
+                        button.accordion__item__body__footer__btns__next
+                            | Далее
+
+        .accordion__item
+            .accordion__item__header
+                .accordion__item__header__number
+                    | 2
                 h1.accordion__item__header__title
                     | Регион доставки
             .accordion__item__body
                 .accordion__item__content
                     p.accordion__item__body__text
                         | Город доставки
-                    .accordion__item__input
-                        input( placeholder='Введите название', type='text').accordion__item__input
+                    input( placeholder='Введите название' name='city' type='text' data-validate-field="city").accordion__item__input
                 .accordion__item__body__footer
                     .accordion__item__body__footer__btns--first
+                        button.accordion__item__body__footer__btns__prev
+                            | Назад
                         button.accordion__item__body__footer__btns__next
                             | Далее
         .accordion__item
             .accordion__item__header
                 .accordion__item__header__number
-                    | 2
+                    | 3
                 h1.accordion__item__header__title
                     | Доставка
             .accordion__item__body
@@ -27,19 +43,19 @@
                     .accordion__item__deliveryWays
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='radio', name='deliveryWay', id='deliveryWay1')
+                                input(type='radio', name='deliveryWay', id='deliveryWay1' value='Самовывоз')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay1')
                             h4.accordion__item__deliveryWays__way__title
                                 | Самовывоз
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='radio', name='deliveryWay', id='deliveryWay2')
+                                input(type='radio', name='deliveryWay', id='deliveryWay2' value='Доставка курьером')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
                             h4.accordion__item__deliveryWays__way__title
                                 | Доставка курьером
                         .accordion__item__deliveryWays__way
                             .accordion__item__deliveryWays__way__block
-                                input(type='radio', name='deliveryWay', id='deliveryWay3')
+                                input(type='radio', name='deliveryWay', id='deliveryWay3' value='Доставка почтой России')
                                 img(src='img/deliveryWay1.jpg', alt='deliveryWay2')
                             h4.accordion__item__deliveryWays__way__title
                                 | Доставка почтой России
@@ -54,7 +70,7 @@
         .accordion__item
             .accordion__item__header
                 .accordion__item__header__number
-                    | 3
+                    | 4
                 h1.accordion__item__header__title
                     | Оплата
             .accordion__item__body
@@ -62,19 +78,19 @@
                     .accordion__item__paymentWays
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='radio', name='paymentWay', id='paymentWay1')
+                                input(type='radio', name='paymentWay', id='paymentWay1' value='Онлайн - оплата на сайте')
                                 img(src='img/paymentWay1.png', alt='paymentWay1')
                             h4.accordion__item__paymentWays__way__title
                                 | Онлайн - оплата на сайте
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='radio', name='paymentWay', id='paymentWay2')
+                                input(type='radio', name='paymentWay', id='paymentWay2' value='Оплата на карту Сбербанка')
                                 img(src='img/paymentWay2.jpg', alt='paymentWay2')
                             h4.accordion__item__paymentWays__way__title
                                 | Оплата на карту Сбербанка
                         .accordion__item__paymentWays__way
                             .accordion__item__paymentWays__way__block
-                                input(type='radio', name='paymentWay', id='paymentWay3')
+                                input(type='radio', name='paymentWay', id='paymentWay3' value='Доставка почтой России')
                                 img(src='img/paymentWay3.jpg', alt='paymentWay3')
                             h4.accordion__item__paymentWays__way__title
                                 | Доставка почтой России
@@ -89,46 +105,31 @@
         .accordion__item
             .accordion__item__header
                 .accordion__item__header__number
-                    | 4
+                    | 5
                 h1.accordion__item__header__title
                     | Покупатель
             .accordion__item__body
-                form.accordion__item__form
+                .accordion__item__form
                     label.accordion__item__form__label
                         | Ф.И.О
-                        input( placeholder='Введите имя', type='text').accordion__item__form__input
+                        input( placeholder='Введите имя', type='text' name='name' data-validate-field="name").accordion__item__form__input
                     label.accordion__item__form__label
                         | Email
-                        input( placeholder='Введите Email', type='text').accordion__item__form__input
+                        input( placeholder='Введите Email', type='text' name='email' data-validate-field="email").accordion__item__form__input
                     label.accordion__item__form__label
                         | Телефон
-                        input( placeholder='Введите телефон', type='tel').accordion__item__form__input
+                        input( placeholder='Введите телефон', type='tel' name='number-phone' data-validate-field="phone").accordion__item__form__input
 
                     label.accordion__item__form__label
                         | Адрес доставки
-                        textarea( placeholder='Введите адрес доставки', type='text').accordion__item__form__address
+                        textarea( placeholder='Введите адрес доставки', name='address' data-validate-field="address").accordion__item__form__address
                     label.accordion__item__form__label
                         | Комментарии к заказу
-                        textarea( placeholder='Оставьте свой комментарий', type='text').accordion__item__form__comment
+                        textarea( placeholder='Оставьте свой комментарий', name='comment' data-validate-field="address").accordion__item__form__comment
 
-                .accordion__item__body__footer
-                    .accordion__item__body__footer__btns
-                        button.accordion__item__body__footer__btns__prev
-                            | Назад
-                        button.accordion__item__body__footer__btns__next
-                            | Далее
-        .accordion__item
-            .accordion__item__header
-                .accordion__item__header__number
-                    | 5
-                h1.accordion__item__header__title
-                    | Товары в заказе
-            .accordion__item__body
-                .accordion__item__order
-                    // рендер компонентов корзины
-
-                    .accordion__item__order
-                .accordion__item__body__footer
-                    .accordion__item__body__footer__btns--last
-                        button.accordion__item__body__footer__btns__prev
-                            | Назад
+                    .accordion__item__body__footer
+                        .accordion__item__body__footer__btns
+                            button.accordion__item__body__footer__btns__prev
+                                | Назад
+                            button(type="submit").accordion__item__body__footer__makeOrder
+                                | Оформить заказ

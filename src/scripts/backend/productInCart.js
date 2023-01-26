@@ -24,7 +24,10 @@ export const handlerAddProductInCart = () => {
                 length: parseFloat(card.querySelector('[data-counter] input').value
                     .replace(/[^.\d]/g, '')),
                 total: parseInt(card.querySelector('[data-price]').textContent)
-                    * parseFloat(card.querySelector('[data-counter] input').value) * 10
+                    * parseFloat(card.querySelector('[data-counter] input').value) * 10,
+                markingProduct: card.querySelector('[data-mainImg]').getAttribute('src')
+                    .match(/[ \w-]+\./g, '')[0]
+                    .replace('.', ''),
 
             }
             hashProductInCart(productData);

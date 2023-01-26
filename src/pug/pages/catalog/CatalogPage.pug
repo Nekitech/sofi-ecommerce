@@ -1,0 +1,130 @@
+extends ../../layout/layout
+block page
+    include ../../chunk/header/header
+    main.catalogPage
+        .container
+            .catalogPage__wrapper
+                .catalogPage__filters
+                    select.catalogPage__filters__sortPrice
+                        option(value='') Сортировать по цене
+                        option(value='') По возрастанию
+                        option(value='') По убыванию
+                    select.catalogPage__filters__sortComposition
+                        option(value='') Сортировать по составу
+                        option(value='') Хлопок
+                        option(value='') Шерсть
+                .catalogPage__productCards
+                    include ../../mixins/cardProduct/CardProduct
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'PageProduct.html',
+                            img1: 'img/ST3025.webp',
+                            img2: 'img/ST3027.webp',
+                            img3: 'img/ST3025.webp',
+                            mainImg: 'img/ST3025.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'PageProduct.html',
+                            img1: 'img/ST-2004.webp',
+                            img2: 'img/ST-2001.webp',
+                            img3: 'img/ST-2001.webp',
+                            mainImg: 'img/ST-2004.webp',
+                            title: 'Полосатый сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3002.html',
+                            img1: 'img/ST3002.webp',
+                            img2: 'img/ST3003.webp',
+                            img3: 'img/ST3004.webp',
+                            mainImg: 'img/ST3002.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3005.html',
+                            img1: 'img/ST3005.webp',
+                            img2: 'img/ST3012.webp',
+                            img3: 'img/ST3013.webp',
+                            mainImg: 'img/ST3005.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3014.html',
+                            img1: 'img/ST3014.webp',
+                            img2: 'img/ST3015.webp',
+                            img3: 'img/ST3016.webp',
+                            mainImg: 'img/ST3014.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3018.html',
+                            img1: 'img/ST3018.webp',
+                            img2: 'img/ST3019.webp',
+                            img3: 'img/ST3020.webp',
+                            mainImg: 'img/ST3018.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3022.html',
+                            img1: 'img/ST3022.webp',
+                            img2: 'img/ST3023.webp',
+                            img3: 'img/ST3024.webp',
+                            mainImg: 'img/ST3022.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST3026.html',
+                            img1: 'img/ST3026.webp',
+                            img2: 'img/ST3026.webp',
+                            img3: 'img/ST3026.webp',
+                            mainImg: 'img/ST3026.webp',
+                            title: 'Гладкий сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST-2020.html',
+                            img1: 'img/ST-2020.webp',
+                            img2: 'img/ST-2022.webp',
+                            img3: 'img/ST-2023.webp',
+                            mainImg: 'img/ST-2020.webp',
+                            title: 'Полосатый сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+                    .catalogPage__productCards__card
+                        +CardProduct({
+                            link: 'ST-2024.html',
+                            img1: 'img/ST-2024.webp',
+                            img2: 'img/ST-2026.webp',
+                            img3: 'img/ST-2027.webp',
+                            mainImg: 'img/ST-2024.webp',
+                            title: 'Полосатый сатин',
+                            priceNew: '1000 руб.',
+                            pricePrev: '2000 руб.'
+                        })
+
+    include ../../templates/popup/popup
+    include ../../chunk/footer/footer
