@@ -3212,6 +3212,12 @@ html.activeBurger {
   flex-wrap: wrap;
 }
 
+.catalogPage__productCards__card {
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+
 .hideItem {
   display: none;
 }

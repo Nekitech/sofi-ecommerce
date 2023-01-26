@@ -18,6 +18,7 @@ import Inputmask from "inputmask/lib/inputmask";
 import JustValidate from 'just-validate';
 import {formSend} from "./backend/formSend";
 import {searchCatalog} from "./searchCatalog";
+import {sortCatalog} from "./sortCatalog";
 
 const hideMenu = document.querySelector('.hide-list');
 hideMenuHandler(hideMenu, hideMenuData);
@@ -394,7 +395,15 @@ const catalog = document.querySelector('.catalogPage');
 
 if(catalog) {
     searchCatalog(inputSearch, catalog);
+    //filter Catalog
+
+    const filterPrice = document.querySelector('.catalogPage__filters__sortPrice');
+
+    if(filterPrice) {
+        sortCatalog(catalog, filterPrice);
+    }
 }
+
 
 
 

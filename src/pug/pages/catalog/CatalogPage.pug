@@ -5,14 +5,14 @@ block page
         .container
             .catalogPage__wrapper
                 .catalogPage__filters
-                    select.catalogPage__filters__sortPrice
-                        option(value='') Сортировать по цене
-                        option(value='') По возрастанию
-                        option(value='') По убыванию
-                    select.catalogPage__filters__sortComposition
-                        option(value='') Сортировать по составу
-                        option(value='') Хлопок
-                        option(value='') Шерсть
+                    select(id="sort-price").catalogPage__filters__sortPrice
+                        option(value='start') Сортировать по цене
+                        option(value='up') По возрастанию
+                        option(value='down') По убыванию
+                    //select(id="sort-composition").catalogPage__filters__sortComposition
+                    //    option(value='') Сортировать по составу
+                    //    option(value='') Хлопок
+                    //    option(value='') Шерсть
                 .catalogPage__productCards
                     include ../../mixins/cardProduct/CardProduct
                     .catalogPage__productCards__card
@@ -23,7 +23,7 @@ block page
                             img3: 'img/ST3025.webp',
                             mainImg: 'img/ST3025.webp',
                             title: 'Гладкий сатин',
-                            priceNew: '1000 руб.',
+                            priceNew: '1567 руб.',
                             pricePrev: '2000 руб.'
                         })
                     .catalogPage__productCards__card
@@ -34,7 +34,7 @@ block page
                             img3: 'img/ST-2001.webp',
                             mainImg: 'img/ST-2004.webp',
                             title: 'Полосатый сатин',
-                            priceNew: '1000 руб.',
+                            priceNew: '1200 руб.',
                             pricePrev: '2000 руб.'
                         })
                     .catalogPage__productCards__card
@@ -45,7 +45,7 @@ block page
                             img3: 'img/ST3004.webp',
                             mainImg: 'img/ST3002.webp',
                             title: 'Гладкий сатин',
-                            priceNew: '1000 руб.',
+                            priceNew: '136 руб.',
                             pricePrev: '2000 руб.'
                         })
                     .catalogPage__productCards__card
@@ -67,7 +67,7 @@ block page
                             img3: 'img/ST3016.webp',
                             mainImg: 'img/ST3014.webp',
                             title: 'Гладкий сатин',
-                            priceNew: '1000 руб.',
+                            priceNew: '150 руб.',
                             pricePrev: '2000 руб.'
                         })
                     .catalogPage__productCards__card
