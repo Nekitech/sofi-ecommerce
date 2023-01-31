@@ -22,5 +22,15 @@
 
 
   }
+
+}
+
+
+@media (max-width: 1000px) {
+  .orderMake {
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+  }
 }
 

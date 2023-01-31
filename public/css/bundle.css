@@ -2566,7 +2566,7 @@ html.activeBurger {
 .accordion__item__paymentWays {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px 20px;
 }
@@ -3198,6 +3198,7 @@ html.activeBurger {
 
 .catalogPage {
   width: 100%;
+  margin-top: 50px;
 }
 
 .catalogPage__wrapper {
@@ -3224,6 +3225,15 @@ html.activeBurger {
   position: relative;
   width: 200px;
   height: auto;
+}
+
+.catalogPage__filters {
+  margin-bottom: 30px;
+}
+
+.catalogPage__filters__sortPrice {
+  width: 250px;
+  height: 30px;
 }
 
 .hideItem {
@@ -3536,6 +3546,13 @@ html.activeBurger {
     flex-direction: column-reverse;
   }
 
+  .orderMake__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -3646,6 +3663,17 @@ html.activeBurger {
 @media (max-width: 380px) {
   .main__blocks__item {
     width: 90%;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 360px) {
+  .accordion__item__order__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
 @supports (-webkit-appearance:none) {
