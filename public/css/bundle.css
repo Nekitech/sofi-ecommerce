@@ -2400,18 +2400,25 @@ html.activeBurger {
   align-items: start;
 }
 
+.cart__content__left {
+  width: 100%;
+}
+
 .cart__content__text {
   margin-bottom: 40px;
 }
 
 .cart__content__right {
-  position: sticky;
-  top: 0;
+  width: 100%;
+}
+
+.cart__content__tableWrapper {
+  overflow-x: auto;
 }
 
 .cart__content__tableCart {
   display: table;
-  width: 100%;
+  width: 700px;
   border-collapse: collapse;
   border-spacing: 10px;
 }
@@ -2458,7 +2465,8 @@ html.activeBurger {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 20px 0;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 300px;
   background: rgba(187, 157, 96, 0.1);
 }
@@ -3516,6 +3524,16 @@ html.activeBurger {
 
   .header__menu {
     display: none;
+  }
+
+  .cart__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 
 @supports (-webkit-appearance:none) {

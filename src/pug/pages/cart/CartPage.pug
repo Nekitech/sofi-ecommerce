@@ -13,25 +13,26 @@ block page
                         p.cart__content__text
                             | Проверьте наличие всех необходимых товаров в корзине, если всё верно,
                             | перейдите к оформлению заказа
-                        table.cart__content__tableCart
-                            col(style='width: 20%')
-                            col(style='width: 20%')
-                            col(style='width: 35%')
-                            col(style='width: 100px')
-                            col(style='width: 15%')
-                            thead.cart__content__tableCart__head
-                                tr.cart__content__tableCart__row
-                                    th.cart__content__tableCart__cell
-                                        | Фото товара
-                                    th.cart__content__tableCart__cell
-                                        | Название товара
-                                    th.cart__content__tableCart__cell
-                                        | Цена
-                                    th.cart__content__tableCart__cell
-                                        | Длина
-                                    th.cart__content__tableCart__cell
-                                        | Итого
-                            tbody.cart__content__tableCart__body
+                        .cart__content__tableWrapper
+                            table.cart__content__tableCart
+                                col(style='width: 20%')
+                                col(style='width: 20%')
+                                col(style='width: 35%')
+                                col(style='width: 100px')
+                                col(style='width: 15%')
+                                thead.cart__content__tableCart__head
+                                    tr.cart__content__tableCart__row
+                                        th.cart__content__tableCart__cell
+                                            | Фото товара
+                                        th.cart__content__tableCart__cell
+                                            | Название товара
+                                        th.cart__content__tableCart__cell
+                                            | Цена
+                                        th.cart__content__tableCart__cell
+                                            | Длина
+                                        th.cart__content__tableCart__cell
+                                            | Итого
+                                tbody.cart__content__tableCart__body
 
 
                     .cart__content__right
